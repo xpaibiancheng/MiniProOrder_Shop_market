@@ -78,28 +78,26 @@
 
 更多项目可以微扫码进入社区：
 
-<img src="img/image-20231102110342923.png" alt="image-20231102110342923" style="zoom: 33%;float:left" />
+<img src="img/image-20231102110342923.png" alt="image-20231102110342923" style="zoom: 25%; float: left;" />
 
 # 小程序展示图片
 
-<img src="images/01.jpg" style="zoom:33%;float:left" />
+<img src="images/01.jpg" style="zoom: 25%; float: left;" /><img src="images/02.jpg" alt="02" style="zoom: 25%; float: left;" />
 
-<img src="images/02.jpg" alt="02" style="zoom:33%;float:left" />
 
-<img src="images/03.jpg" alt="03" style="zoom:33%;float:left" />
 
-<img src="images/04.jpg" alt="04" style="zoom:33%;float:left" />
+<img src="images/03.jpg" alt="03" style="zoom: 25%; float: left;" /><img src="images/04.jpg" alt="04" style="zoom: 25%; float: left;" />
 
-<img src="images/05.jpg" alt="05" style="zoom:33%;float:left" />
 
-<img src="images/06.jpg" alt="06" style="zoom:33%;float:left" />
 
-<img src="images/07.jpg" alt="07" style="zoom:33%;float:left" />
 
-<img src="images/08.jpg" alt="08" style="zoom:33%;float:left" />
 
-<img src="images/09.jpg" alt="09" style="zoom:33%;float:left" />
+<img src="images/06.jpg" alt="06" style="zoom: 25%; float: left;" /><img src="images/05.jpg" alt="05" style="zoom: 25%; float: left;" />
 
-<img src="images/10.jpg" alt="10" style="zoom:33%;float:left" />
+<img src="images/07.jpg" alt="07" style="zoom: 25%; float: left;" /><img src="images/08.jpg" alt="08" style="zoom: 25%; float: left;" />
 
-<img src="images/11.jpg" alt="11" style="zoom:33%;float:left" />
+
+
+
+
+<img src="images/11.jpg" alt="11" style="zoom: 25%; float: left;" /><img src="images/10.jpg" alt="10" style="zoom: 25%; float: left;" />
