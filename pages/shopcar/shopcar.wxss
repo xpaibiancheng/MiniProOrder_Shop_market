@@ -1,0 +1,195 @@
+/* pages/shopcar/shopcar.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.shopCarGroups{
+    width: 95%;
+    height: 250rpx;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20rpx auto;
+}
+.groupRadio{
+    width: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10rpx;
+}
+.shopImage{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grouupImage{
+   width:100%;
+   height: 80%;
+   border-radius: 10rpx;
+}
+.groupDetail{
+    width: 55%;
+    height: 95%;
+}
+.groupTitle{
+    padding-top: 10rpx;
+    width: 98%;
+    line-height: 1.5;
+    /* 做弹性布局 */
+    /* 弹性盒子布局 */
+    display: -webkit-box;
+    /* 超出 文本省略号*/
+    text-overflow: ellipsis;
+    /* 隐藏超出文本*/
+    overflow: hidden;
+    /* 允许最大文本行数 */
+    -webkit-line-clamp: 2;
+    /* 自动换行 */
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}
+.groupRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60rpx;
+}
+.groupRightCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 2rpx solid rgb(247, 247, 247);
+    border-bottom: 2rpx solid rgb(247, 247, 247);
+    margin-right: 20rpx;
+}
+.groupRightCount>view{
+    text-align: center;
+    border-left: 1rpx solid rgb(138, 131, 131);
+}
+.groupRight_price{
+    font-size: 40rpx;
+    color: rgba(249, 108, 47, 1);
+}
+/* 公告栏 */
+@keyframes remindMessage {
+    0% {
+     -webkit-transform: translateX(90%);
+    }
+   
+    100% {
+     -webkit-transform: translateX(-180%);
+    }
+}
+   
+.tongzhitext {
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tongzhi-text {
+    font-size: 30rpx;
+    animation: remindMessage 14s linear infinite;
+    width: 100%;
+    color:#99CC99;
+    display: block;
+    font-weight: 550;
+}
+
+.notice-wrap {
+    width: 100%;
+    margin: 10rpx auto;
+    display: flex;
+    flex-direction: row;                                                                                    
+}
+
+.closeView {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+    font-size: 40rpx;
+    margin-right: 30rpx;
+}
+/* 结算 */
+.shopCar_select_delete{
+    width: 100%;
+    border-top: 2rpx solid whitesmoke;
+    height: 100rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 2rpx;
+}
+.shopCar_select_delete>view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/*使屏幕变暗  */
+.commodity_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    padding-top: 20rpx;
+    border-radius: 30rpx 30rpx 0rpx 0rpx;
+}
+
+.shopAccpetddress{
+    width: 95%;
+    padding: 20rpx 0rpx;
+    border-bottom: 2rpx solid rgb(221, 218, 218);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.accAddMidd{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20rpx auto;
+
+}
+
+.accAddMidd>image{
+    width: 50rpx;
+    height:50rpx;
+}

@@ -1,0 +1,26 @@
+<!--pages/market/market.wxml-->
+<!-- 搜索 -->
+<view class="index_search" bindtap="bindSearch">
+    <image  src="/images/搜索.png"></image>
+    <view>搜索</view>
+</view>
+<view class="marketAll">
+    <!-- 商品分类 -->
+    <scroll-view scroll-y class="marLaft" >
+        <block wx:for="{{teaClass}}" wx:key="index">
+            <view class="marLaftText {{handIndex==index?'markLaTextBind':''}}" bindtap="bindHandIndex" data-index="{{index}}" data-name="{{item}}">{{item}}</view>
+        </block>
+    </scroll-view>
+    <!-- 商品区域 -->
+    <view class="marRight">
+        <scroll-view   scroll-y style="width: 100%;height: 100%;">
+            <view class="marRightScroll">
+                <view class="marRightRow" bindtap="bindNavDtail" wx:for="{{shopKind}}" wx:key="index" data-name="{{item.shopKind}}">
+                    <image src="{{item.goodPhotosLast[0]}}"></image>
+                    <view class="marRightRowView">{{item.shopKind}}</view>
+                </view> 
+            </view>
+        </scroll-view>
+    </view>
+</view>
+

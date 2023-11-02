@@ -1,0 +1,38 @@
+/* pages/orderSelect/orderSelect.wxss */
+page{
+    background: url('https://nimg.ws.126.net/?url=https://dingyue.ws.126.net/2020/0418/2b58e599j00q8yanf002sd200tn016eg00it00qw.jpg&thumbnail=650x2147483647&quality=80&type=jpg') no-repeat center center;
+}
+
+  
+.man_count{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+.man_count{
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    flex-wrap: wrap;
+}
+.num{
+    width: 18%;height: 80rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    text-align: center;
+    color: black;
+    font-size: 40rpx;
+    line-height: 1.5;
+    margin-left: 10rpx;
+    margin-top: 20rpx;
+}
+.oder_count>view{
+    font-size: 35rpx;
+    line-height: 2;
+    font-weight: 550;
+}
+.manClickStyle{
+    background-color:#99CC99;
+}

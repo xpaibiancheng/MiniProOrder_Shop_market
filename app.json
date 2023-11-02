@@ -1,0 +1,102 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/market/market",
+        "pages/shopcar/shopcar",
+        "pages/pay/pay",
+        "pages/user/user",
+        "pages/main/main",
+        "pages/start/start",
+        "pages/login/login",
+        "pages/search/search",
+        "pages/shopDetail/shopDetail",
+        "pages/orderDetail/orderDetail",
+        "pages/orderClass/orderClass",
+        "pages/orderSelect/orderSelect",
+        "pages/fankui/fankui",
+        "pages/orderTea/orderTea",
+        "pages/dingzuo/dingzuo",
+        "pages/dingzhuoInfo/dingzhuoInfo",
+        "pages/houtaiIndex/houtaiIndex",
+        "pages/houtaiShop/houtaiShop",
+        "pages/houtaiXiajia/houtaiXiajia",
+        "pages/buyStyle/buyStyle",
+        "pages/ziti/ziti",
+        "pages/kuaidi/kuaidi",
+        "pages/kdAddress/kdAddress",
+        "pages/shopDingdan/shopDingdan",
+        "pages/houtaiOrder/houtaiOrder",
+        "pages/diandanDetail/diandanDetail",
+        "pages/orderDingDan/orderDingDan",
+        "pages/kefu/kefu",
+        "pages/editor/editor",
+        "pages/address/address",
+        "pages/addressEditor/addressEditor",
+        "pages/takeOut/takeOut",
+        "pages/payOrder/payOrder",
+        "pages/newRoom/newRoom",
+        "pages/adminChongzhi/adminChongzhi",
+        "pages/adminYuyue/adminYuyue",
+        "pages/adminYyHexiao/adminYyHexiao",
+        "pages/adminUser/adminUser",
+        "pages/adminZiti/adminZiti",
+        "pages/adminZitiHx/adminZitiHx",
+        "pages/adminKd/adminKd",
+        "pages/adminPs/adminPs",
+        "pages/adminOrZiti/adminOrZiti",
+        "pages/adminOrZtHx/adminOrZtHx",
+        "pages/adminTs/adminTs",
+        "pages/adminShopMn/adminShopMn",
+        "pages/myorder/myorder",
+        "pages/adminPayRule/adminPayRule",
+        "pages/adminVip/adminVip",
+        "pages/adminPsRule/adminPsRule"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "品茶云服务",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/images/主页 (1).png",
+            "selectedIconPath": "/images/主页.png"
+        },{
+            "pagePath": "pages/orderDingDan/orderDingDan",
+            "text": "我的点单",
+            "iconPath": "/images/充值.png",
+            "selectedIconPath": "/images/充值 (1).png"
+        },{
+            "pagePath": "pages/market/market",
+            "text": "商城",
+            "iconPath": "/images/商城 (1).png",
+            "selectedIconPath": "/images/商城.png"
+        },{
+            "pagePath": "pages/shopcar/shopcar",
+            "text": "购物车",
+            "iconPath": "/images/购物车.png",
+            "selectedIconPath": "/images/购物车 (1).png"
+        },{
+            "pagePath": "pages/user/user",
+            "text": "个人信息",
+            "iconPath": "/images/用户信息 (2).png",
+            "selectedIconPath": "/images/用户信息 (3).png"
+        }
+    ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "位置选择"
+        }
+    },
+    "requiredPrivateInfos":[ "chooseLocation"],
+       
+    
+    "enablePullDownRefresh": true
+}

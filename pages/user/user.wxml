@@ -1,0 +1,133 @@
+<!--pages/user/user.wxml-->
+<!-- 未登录显示  -->
+<view wx:if="{{loginFlag==0}}">
+  <!-- 图片区域 -->
+  <view class="login_photo" >
+    <image src="https://img.zcool.cn/community/012dd15fd0995c11013fdcc78e5f37.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100"></image>
+  </view>
+  <view class="login_txt">
+    <view class="txt_row01" style="font-size: 40rpx;">扫榻以待</view>
+    <view class="txt_row02"></view>
+    <view class="txt_row03" style="color: rgb(107, 107, 107);font-size: 28rpx;">业精于勤，荒于嬉；行成于思，毁于随</view>
+  </view>
+  <button class="login" bindtap="toLogin">登录</button>
+</view>
+<!-- 登录显示 -->
+<view wx:if="{{loginFlag==1}}">
+    <view class="userTop">
+    <view class="topTitle">个人中心</view>
+    <image class="userFace" src="{{userFace}}"></image>
+    <view class="userName">{{userName}}</view>
+    <view class="introduce">{{userNum}}</view>
+    <view class="introduce">{{phone}}</view>
+</view>
+<!-- 用户行为 -->
+<view class="actionView">
+    <view class="actionUser">
+        <view class="actionNum">{{userAccount}}</view>
+        <view class="actionTuple">账户余额</view>
+    </view>
+    <view class="actionUser" bindtap="bindYouhui">
+        <view class="actionNum">{{quanLen}}</view>
+        <view class="actionTuple">优惠券</view>
+    </view>
+    <view class="actionUser" bindtap="bindPay">
+        <view class="actionNum">冲卡</view>
+        <view class="actionTuple">点击这里</view>
+    </view>
+</view>
+<!-- 订单状态 -->
+<view class="orderStatus">
+    <view class="orderStatusTop" bindtap="NavMyOrder">
+        <view style="font-weight: 550;padding-left: 20rpx;">我的订单</view>
+        <view style="color: rgba(167, 165, 165, 1);padding-right: 25rpx;font-size: 27rpx;">全部></view>
+    </view>
+    <view class="orderStatusBotton">
+        <view class="buttonRows" bindtap="noPay">
+            <image src="/static/待付款 (1).png" class="buttonRowsImgs" mode=""/>
+            <view class="buttonRowsTitle">待付款</view>
+        </view>
+        <view class="buttonRows" bindtap="noSend">
+            <image src="/static/待收货 (1).png" class="buttonRowsImgs" mode=""/>
+            <view class="buttonRowsTitle">待发货</view>
+        </view>
+        <view class="buttonRows" bindtap="noGet">
+            <image src="/static/待收货 (1).png" class="buttonRowsImgs" mode=""/>
+            <view class="buttonRowsTitle">待收货</view>
+        </view>
+        <view class="buttonRows" bindtap="ok">
+            <image src="/static/已完成.png" class="buttonRowsImgs" mode=""/>
+            <view class="buttonRowsTitle">已完成</view>
+        </view>
+    </view>
+</view>
+<!-- 其他设置 -->
+<view class="otherFunction">
+    <view class="otherFunctionRows" bindtap="bindMyAddress" style="padding-top: 30rpx;">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">我的地址</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows" bindtap="editorInfo">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">编辑资料</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows" bindtap="orderInfo">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">订桌信息</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows" bindtap="bindKefu">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">联系客服</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">常见问题</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">关于我们</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows" bindtap="bindExit">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">退出登录</view>
+        <view class="otherRowsTarget">></view>
+    </view>
+    <view class="otherFunctionRows" style="padding-bottom: 20rpx;" bindtap="bindNavAdmin">
+        <view class="otherrowsLeft"></view>
+        <view class="otherRowsTitle">后台入口</view>
+        <view class="otherRowsTarget">></view>
+    </view> 
+</view>
+<view style="width: 100%;height: 60rpx;"></view>
+    <!-- <button type="primary" style="border-radius: 10rpx;width: 90%;margin-top: 40rpx;" bindtap="bindClear">退出登录</button> -->
+    <view style="text-align: center;position: relative;bottom: 0rpx;color: rgb(145, 155, 165);left: 10rpx;font-size: 27rpx;">
+        <view >@小程序开发/技术支持:15215322004</view> 
+        <view>备案号:鲁ICP备2023029549号-1X</view> 
+    </view>
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view style="width: 100%;height: 80rpx;display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+        </view>
+        <view style="text-align: center;">点击阴影处返回</view>
+</view>
+
+<!-- 管理员 -->
+<view class="adminStaock" wx:if="{{adminFlag==true}}">
+    <view class="adminTop">
+        <view style="margin-left: 15rpx;color: royalblue;">小茶馆管理后台</view>
+        <view style="margin-right: 15rpx;color: red;" bindtap="bindAdminClose">关闭</view>
+    </view>
+    <input placeholder="请输入密码" bindinput="bindInputadmin" type="password" />
+    <view class="clickSelectw">
+        <view style="background-color: lightcoral;" bindtap="bindAdminClose">取消</view>
+        <view style="background-color: mediumseagreen;" bindtap="bindQueDing">确定</view>
+    </view>
+</view>

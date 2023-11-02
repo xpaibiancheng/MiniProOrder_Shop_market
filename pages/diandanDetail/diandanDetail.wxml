@@ -1,0 +1,91 @@
+<!--pages/diandanDetail/diandanDetail.wxml-->
+<!-- 商品图片 -->
+<view class="detail_Swiper">
+  <swiper indicator-dots indicator-active-color="#fff" circular autoplay interval="3000" style="width: 100%;height: 500rpx;">
+    <block wx:for="{{rows.goodPhotosLast}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" style="width: 100%;height: 500rpx;"></image>
+        </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 标题 -->
+<view class="titleAndYl">
+    <view class="title">{{rows.shopTitle}}</view>
+    <view class="yl">{{rows.shopYuanLiao}}</view>
+</view>
+<!-- 属性 -->
+<view class="shuxing">
+    <block wx:for="{{rows.shopShuXing}}" wx:for-index="indexFather" wx:for-item="itemFather"> 
+        <view class="shuxingRows">
+            <view class="shuxingRowsName">{{itemFather.name}}</view>
+            <view class="shuxingRowsValue">
+                <block wx:for="{{itemFather.detail}}" wx:for-index="indexSoon" wx:for-item="itemSoon">
+                    <view class="RowValuesGroups {{handleIndex[indexFather].detail[indexSoon].flag==true ? 'handleIndexStyle':''}}" bindtap="bindIndexDouble" data-indexFather="{{indexFather}}" data-indexSoon="{{indexSoon}}">{{itemSoon.value}}</view>
+                </block>
+            </view>
+        </view>
+    </block>
+    <view style="width: 100%;height: 70rpx;"></view>
+</view>
+<!-- 详细地图 -->
+<view class="detailPhotos">
+    <view class="detailPhotosText">详细信息</view>
+    <view class="detailPhotosImgs">
+        <image wx:for="{{rows.goodDetail}}" wx:key="index" mode='widthFix' src="{{item}}"></image>
+    </view>
+</view>
+<!-- 介绍 -->
+<view style="width: 98%;border-radius: 20rpx;background: white;margin:40rpx auto">
+    <view style="font-size: 40rpx;margin-left: 20rpx;padding-top: 20rpx;">商品介绍</view>
+    <view style="color: #ccc;margin-left: 20rpx;margin-top: 20rpx;padding-bottom: 40rpx;">
+        {{rows.detailTips}}
+    </view>
+    <view style="width: 100%;height: 400rpx;"></view>
+</view>
+
+<!-- 订单计算 -->
+<view class="paySub">
+    <view class="paySubTop">
+        <view class="paySubRowsOne">￥{{priceAll}}</view>
+        <view class="paySubTopRight">
+            <view class="paySubTopRightMul" bindtap="bindMulNum">-</view>
+            <view class="paySubTopRightNum">{{orderNum}}</view>
+            <view class="paySubTopRightAdd" bindtap="bindAddNum">+</view>
+        </view>
+    </view>
+    <view style="width: 95%;display: flex;flex-direction: row;align-items: center;margin:auto;color: rgb(155, 153, 153);padding:15rpx 0;font-size: 27rpx;">
+        <view>{{rows.shopTitle}}￥{{rows.shopPrice}}</view>
+        <view wx:for="{{tempOrderDetail}}" wx:key="index">+{{item.value}}￥{{item.price}}</view>
+    </view>
+    <view class="paySubbottom">
+        <view class="paySubRowsTow" bindtap="bindAddToShopCar">加入购物车</view>
+        <view class="paySubRowsThree" bindtap="bindConfirm">立即支付</view>
+    </view> 
+</view>
+
+<!-- 支付方式 -->
+<view class="payStyleSelect" wx:if="{{paySelectFlag}}">
+     <view class="payStyleTop">
+        <view>您正在支付小茶馆</view>
+        <view style="color: red;" bindtap="bindCanel">关闭</view>
+     </view>
+     <view class="payStyleMiddle">
+         <radio-group bindchange="bindSelectStyle">
+             <view style="margin-top: 15rpx;font-size: 35rpx;">
+                <radio  checked="{{styleFlag[0].flag}}" value="1"></radio>会员卡余额支付
+             </view>
+            <view style="margin-top: 40rpx;font-size: 35rpx;">
+                <radio  checked="{{styleFlag[1].flag}}" style="margin-top: 15rpx;" value="2"></radio>微信钱包支付
+            </view>
+         </radio-group>
+     </view>
+     <view class="payStyleBottom">
+         <view bindtap="bindCanel">取消</view>
+         <view  bindtap="bindPaySelectNow">确定</view>
+     </view>
+     <view style="font-size: 27rpx;text-align: center;padding-bottom: 20rpx;"> 
+        @技术支持15215322004
+        <view>备案号:鲁ICP备2023031264号-1X</view>
+    </view>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/orderDingDan/orderDingDan.wxml-->
+<view wx:if="{{rows.length==0}}" style="width: 100%;display: flex;flex-direction:column;align-items: center;justify-content: center;">
+    <image style="width: 180rpx;height: 180rpx;" src="/images/暂无订单.png" mode=""/>
+    <view style="margin-top: 20rpx;">亲爱的小主您暂时还没有订单~</view>
+    <view class="RowsBottomTwoAgin" style="margin-top: 20rpx;" bindtap="bindOrderFirst">点击我点单</view>
+</view>
+<block wx:if="{{rows.length!=0}}" wx:for="{{rows}}"  wx:for-index="indexFather" wx:for-item="itemFather">
+    <view class="dingdanRows">
+        <view class="dingdanRowsTop">
+            <view class="RowsTopLeft">{{itemFather.style}}</view>
+            <view class="RowsTopMidd" wx:if="{{itemFather.style=='自提'}}">核销码:{{itemFather.orderCode}}</view>
+            <view class="RowsTopRight">{{itemFather.status}}</view>
+        </view>
+        <view style="width: 95%;border-top: solid 1rpx rgb(224, 224, 224);margin:40rpx auto"></view>
+        <view class="dingdanRowsMidd" wx:for="{{itemFather.orderGroups}}" wx:for-index="indexSoon" wx:for-item="itemSoon">
+            <view class="RowsMiddLeft">
+                <image class="RowsMiddLeftImg" src="{{itemSoon.goodGroups.goodPhotosLast[0]}}" mode=""/>
+            </view>
+            <view class="RowsMiddMidd">
+                <view class="RowsMiddMiddOne">{{itemSoon.goodGroups.shopTitle}}</view>
+                <view class="RowsMiddMiddTwo" style="display: flex;flex-direction: row;align-items: center;">
+                    <block wx:for="{{itemSoon.orderShuXing}}" wx:for-index="indexSoonSoon" wx:for-item="itemSoonSoon">
+                        <view>{{itemSoonSoon.value}}/</view>
+                    </block>
+                </view>
+            </view>
+            <view class="RowsMiddRight">×{{itemSoon.orderNum}}</view>
+        </view>
+        <view style="width: 95%;border-top:dashed 3rpx #ccc;margin:20rpx auto"></view>
+        <view class="dingdanRowsBottom">
+            <view class="RowsBottomOne">
+                <view class="RowsBottomOneTime">{{itemFather.subTime}}</view>
+                <view class="RowsBottomOneSum">共{{itemFather.orderGroups.length}}件商品 合计:<text style="font-weight: 550;">￥{{itemFather.order_price}}</text></view>
+            </view>
+            <view class="RowsBottomTwo">
+                <view style="width: 50%;" wx:if="{{itemFather.orderTable.length!=0}}">{{itemFather.orderTable.code}} 人数:{{itemFather.orderTable.num}}</view>
+                <view class="RowsBottomTwoAgin" bindtap="bindAagin">再来一单</view>
+                <view class="RowsBottomTwoCard" bindtap="bindGetFa">开发票</view>
+            </view>
+        </view>
+    </view>
+</block>
+<view style="text-align: center;color: rgb(107, 107, 107);">
+    到底了，亲爱的小主~
+</view>

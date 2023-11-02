@@ -1,0 +1,9 @@
+<view class="allCon">
+    <image class="imgs" mode="widthFix"  src="{{imgs}}" data-info="{{imgs}}" bindtap="bindPreviewImg"/>
+    <view class="rows">
+        <text class="rowsText" bindtap="callPhoneNum" data-phone="{{phoneNum}}">手机号:{{phoneNum}}(点击拨打)</text>
+        <view class="rowsCopy" bindtap="bindPreviewPhone" data-info="{{phoneNum}}">复制信息</view>
+    </view>
+    <button  type="primary" open-type="contact" bindcontact="handleContact" session-from="sessionFrom" style="border-radius: 15rpx;width: 95%;">快速连接客服</button>
+</view> 
+

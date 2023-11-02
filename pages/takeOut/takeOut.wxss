@@ -1,0 +1,159 @@
+/* pages/orderDetail/orderDetail.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.login_bgTop{
+    width: 100%;
+    height: 400rpx;
+    position: fixed;
+    z-index: -999;
+}
+.oderDetail_top{
+    width: 95%;
+    height: 250rpx;
+    border-radius: 20rpx;
+    background-color: white;
+    margin:50rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: rgb(147, 202, 248) solid;
+}
+.oderDetail_top>image{
+    width: 130rpx;
+    height: 130rpx;
+    margin-left: 50rpx;
+}
+.orderDetail_tea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.oderDetail_tea_left{
+    width: 20%;
+    height:1000rpx;
+
+}
+.tea_leftText{
+    width: 100%;
+    height: 130rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.tea_clickTextBg{
+    background-color: white;
+    font-weight: 550;
+}
+.orderDetail_tea_right_rows{
+    width: 98%;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    margin: 15rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 20rpx;
+}
+.rows_Image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 15rpx;
+}
+.rows_right{
+    width: 65%;
+    height: 70%;
+    margin-left: 20rpx;
+}
+.rowsCount>image{
+    width: 40rpx;
+    height: 40rpx;
+    
+}
+
+.rows_right_title_monthAnd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(107,107, 107);
+    font-size: 25rpx;
+    margin-top: 15rpx;
+}
+.rows_right_priceAndcount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rowsCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-top: 20rpx;
+}
+.oderAll{
+    width: 85%;
+    height: 100rpx;
+    border-radius: 50rpx;
+    background-color: rgb(153,204,153);
+    position: fixed;
+    bottom: 10rpx;
+    left: 50rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.orderAllRight{
+    width:200rpx;
+    height: 70rpx;
+    background-color: white;
+    border-radius: 50rpx;
+    font-size: 35rpx;
+    text-align: center;
+    line-height: 2;
+    margin-right: 30rpx;
+    
+}
+.oderAllLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*使屏幕变暗  */
+.commodity_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    padding-top: 20rpx;
+    border-radius: 30rpx 30rpx 0rpx 0rpx;
+}
+

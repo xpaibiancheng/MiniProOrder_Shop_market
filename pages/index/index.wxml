@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<swiper class="index_swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imageUrls}}">
+    <swiper-item>
+      <image style="width: 100%;height: 100%;" src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 点餐区域 -->
+<view class="orderMain">
+    <view class="mainRows" bindtap="bindToOrder">
+        <image src="/static/堂食 (3).png" mode=""/>
+        <view>堂食点餐</view>
+        <view style="margin-top: 10rpx;font-size: 25rpx;">Dine in</view>
+    </view>
+    <view class="mainRows" bindtap="bindMyself">
+        <image src="/static/待自提 (2).png" style="width: 105rpx;height: 80rpx;" mode=""/>
+        <view>自提外带</view>
+        <view style="margin-top: 10rpx;font-size: 25rpx;">Take out</view>
+    </view>
+    <view class="mainRows" bindtap="bindToVip">
+        <image src="/static/预约 (3).png" mode=""/>
+        <view>预约座位</view>
+        <view style="margin-top: 10rpx;font-size: 25rpx;">Reserved seat</view>
+    </view>
+</view>
+<!-- 无人商店 -->
+<view class="orderMainTow">
+    <view class="mainRowsTwo" style="border-right: 3rpx #ccc solid;" bindtap="bindKaiFangNo">
+        <image src="/static/店铺.png" mode=""/>
+        <view>无人值班</view>
+        <view style="margin-top: 10rpx;font-size: 25rpx;">Unmaned shop</view>
+    </view>
+    <view class="mainRowsTwo" bindtap="bindToShop">
+        <image src="/static/商城 (5).png" mode=""/>
+        <view>自营商城</view>
+        <view style="margin-top: 10rpx;font-size: 25rpx;">shopping center</view>
+    </view>
+</view>
+<!-- 用户资料 -->
+<view class="userInfo">
+    <image class="bgInfo" src="https://7465-teacloud-4gtuflp13ff3ebb7-1319677774.tcb.qcloud.la/swiper/005.jpg?sign=533d33ba900b8cee992d2482dddfaff7&t=1697875700"></image>
+    <view class="index_userInfo">
+       
+        <view wx:if="{{loginFlag==1}}" class="userInfo_name_image">
+            <view style="font-size: 35rpx;color:cadetblue;font-weight:550;">Hello Tea or Coffee</view>
+            <view class="userCode" style="margin-top: 15rpx;color: cadetblue;">您好{{userName}}您的卡号与余额:</view>
+            <view class="userMoney" style="margin-top: 15rpx;color: cadetblue;">
+                <view style="border-right:solid cadetblue 3rpx;padding-right: 20rpx;">{{userNum}}</view>
+                <view style="margin-left: 20rpx;">￥{{userAccount}}</view>
+            </view>
+            <view style="background-color: cadetblue;width: 150rpx;margin-top: 30rpx;text-align: center;border-radius: 20rpx;color: white;" bindtap="bindPay">充值</view>
+        </view>
+        <view style="margin: auto;" wx:if="{{loginFlag!=1}}" bindtap="bindLogin">
+            <button style="background-color: #3ec73e;border-radius: 20rpx;color: white;width:300rpx;height: 80rpx;">
+                立即登录
+            </button>
+        </view>
+    </view>
+</view>
+<view style="width: 100%;height: 80rpx;"></view>

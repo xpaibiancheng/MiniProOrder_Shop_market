@@ -1,0 +1,6 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "点单上新",
+    "navigationBarBackgroundColor": "#99CC99",
+    "enablePullDownRefresh": true
+}

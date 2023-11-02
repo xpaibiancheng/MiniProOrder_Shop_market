@@ -1,0 +1,35 @@
+<!--pages/pay/pay.wxml-->
+<!-- 账户余额 -->
+<view class="yuePay">
+    <view style="width: 70%;height: 95%;display: flex;flex-direction: column;padding-left: 20rpx;padding-top: 20rpx;color:gray">
+        <view style="font-size: 50rpx;color: cadetblue;">账户余额</view>
+        <view style="font-size: 50rpx;margin-top: 20rpx;color: cadetblue;">￥{{money}}元</view>
+    </view>
+    <view style="width: 30%;height: 95%;display: flex;flex-direction:row;margin-top: 20rpx;color: rgb(107, 107, 107);">
+        <view  bindtap="payTips">消费明细</view>
+        <view>></view>
+    </view>
+</view>
+<!--充值  -->
+<view class="payNum">
+    <view class="payRows" wx:for="{{moneyRule}}" wx:key="index" data-index="{{index}}" bindtap="bindPayNum">
+        <view style="height: 80rpx;">
+            充{{item.rule.key}}
+        </view>
+        <view style="font-size: 30rpx;color:cadetblue" wx:if="{{item.rule.value!=0}}">
+            送{{item.rule.value}}
+        </view>
+    </view>
+    <view class="payRows" bindtap="bindpaySelf">自定义金额</view>
+</view>
+<!-- 充值按钮 -->
+<button style="width: 500rpx;height: 100rpx;background-color:#99CC99;border-radius: 40rpx;color: white;font-size: 40rpx;line-height: 1.5;margin-top: 50rpx;">立刻充值</button>
+<!-- 说明 -->
+<view class="payshuoming" style="width: 95%;height: 300rpx;border-radius: 20rpx;margin: 20rpx auto;background-color: white;margin-top: 50rpx;">
+    <view style="font-size: 40rpx;padding-top: 20rpx;">充值说明</view>
+    <view style="font-size: 30rpx;color: rgb(107, 107, 107);">1、充值金额仅在本店内使用</view>
+    <view style="font-size: 30rpx;color: rgb(107, 107, 107);">2、充值完成后不支持自动退款，可以联系商家处理</view>
+    <view style="font-size: 30rpx;color: rgb(107, 107, 107);">3、钱包余额不支持转赠，不可提现，长期有效</view>
+    <view style="font-size: 30rpx;color: rgb(107, 107, 107);">4、如需开发票，可联系商家处理</view>
+</view>
+<!-- 活动 -->

@@ -1,0 +1,250 @@
+/* pages/user/user.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.userTop{
+    width: 100%;
+    height: 600rpx;
+    border-radius: 0rpx 0rpx 40rpx 40rpx;
+    background: linear-gradient(144.67deg, rgba(250, 149, 106, 1) 0%, rgba(251, 134, 71, 1) 48.29%, rgba(255, 168, 107, 1) 100%);
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*头像 */
+.userFace{
+    margin-top: 40rpx;
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.userName{
+    margin-top: 20rpx;
+    margin-bottom: 15rpx;
+    font-size: 35rpx;
+    font-weight: 550;
+}
+.introduce{
+    font-size: 27rpx;
+}
+/* 用户行为 */
+.actionView{
+    width: 95%;
+    height: 150rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -50rpx;
+    left: 20rpx;
+}
+.actionUser{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.actionNum{
+    color: rgba(249, 108, 47, 1);
+    padding-bottom: 15rpx;
+    font-size: 35rpx;
+}
+.actionTuple{
+    font-size: 27rpx;
+}
+.actionUser:nth-child(2){
+    border-left: 2rpx solid #ccc;
+    border-right: 2rpx solid #cccc;
+}
+/* 订单状态 */
+.orderStatus{
+    width: 95%;
+    height: 260rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    margin:auto;
+    
+}
+.orderStatusTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: -25rpx;
+    padding-top: 20rpx;
+}
+.orderStatusBotton{
+    width: 97%;
+    margin-top: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttonRows{
+    width: 24%;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+.buttonRowsImgs{
+    width: 65rpx;
+    height: 65rpx;
+    padding-bottom: 15rpx;
+}
+/* 其他设置 */
+.otherFunction{
+    width: 95%;
+    background-color: white;
+    border-radius: 20rpx;
+    margin: auto;
+}
+.otherFunctionRows{
+    width: 97%;
+    margin:30rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    padding-top: 15rpx;
+
+}
+
+.otherrowsLeft{
+    width: 40rpx;
+    height: 40rpx;
+    background-color: rgba(249, 108, 47, 1);
+    margin-left: 15rpx;
+
+}
+.otherRowsTitle{
+    width: 90%;
+    font-size: 30rpx;
+    margin-left: 25rpx;
+}
+.otherRowsTarget{
+    margin-right: 20rpx;
+    color: #ccc;
+}
+.login_photo{
+    width: 100%;
+    margin-top: 150rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.login_photo>image{
+    width: 90%;
+    border-radius: 20rpx;
+    overflow: hidden;
+    opacity: 0.8;
+}
+.login_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 80rpx;
+    margin-top: 100rpx;
+}
+.login_txt>view{
+    margin-bottom: 20rpx;
+}
+.txt_row02{
+    width: 200rpx;
+    height: 10rpx;
+    border-radius: 30rpx;
+    background:-webkit-linear-gradient(left,#3478f6,#3e79e7,white);
+}
+.login{
+    background-color: #3478f6;
+    border-radius: 50rpx;
+    color: white;
+    margin-top: 100rpx;
+}
+
+/*使屏幕变暗  */
+.commodity_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    padding-top: 20rpx;
+    border-radius: 30rpx 30rpx 0rpx 0rpx;
+}
+
+
+
+/* 管理员通道 */
+.adminStaock{
+    width: 80%;
+    height: 350rpx;
+    background: rgba(245, 249, 250, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.adminTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15rpx;
+    padding-top: 15rpx;
+    border-bottom: solid 2rpx #ccc;
+}
+.adminStaock>input{
+    width: 80%;
+    height: 80rpx;
+    margin: 50rpx auto;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.clickSelectw{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30rpx;
+
+}
+.clickSelectw>view{
+    width: 150rpx;
+    height: 65rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    font-weight: 550;
+}

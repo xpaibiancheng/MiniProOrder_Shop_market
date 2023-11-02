@@ -1,0 +1,20 @@
+<!--pages/adminShopMn/adminShopMn.wxml-->
+
+<!--pages/houtaiXiajia/houtaiXiajia.wxml-->
+<view class="xiajia" wx:for="{{shopAll}}" wx:key="index" data-index="{{index}}">
+    <view class="xiajiaLeft">
+        <image src="{{item.goodPhotosLast[0]}}" mode=""/>
+    </view>
+    <view class="xiajiaMiddle">
+        <view class="top_left">{{item.shopClass}}</view>
+        <view class="middle_text">{{item.shopTitle}}</view>
+        <view class="top_right">{{item.shopYuanLiao}}</view>
+        <view class="middle_price">价格:{{item.shopPrice}}</view>
+        <view class="middle_saleNum">销量：{{item.shopSaleNum}}</view>
+    </view>
+    <view class="xiajiaRight">
+        <image src="/images/删除 (3).png" bindtap="bindDelShop" data-index="{{index}}"></image>
+        <switch checked="{{item.status}}" bindchange="bindOnOff" data-index="{{index}}"/>
+    </view>
+</view>
+<view style="width: 100%;height: 100rpx;"></view>

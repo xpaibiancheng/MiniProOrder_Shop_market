@@ -1,0 +1,95 @@
+<!--pages/houtaiOrder/houtaiOrder.wxml-->
+<!--pages/houtaiShop/houtaiShop.wxml-->
+<!-- 分类 -->
+<view class="shopClass Row">
+    <view class="shopClass_left">商品分类</view>
+    <input type="text" placeholder="请输入商品分类" bindinput="bindClass" value="{{shopClass}}"/>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!--商品标题 -->
+<view class="shopTitle  Row">
+    <view class="shopTitle_left">商品标题</view>
+    <input type="text" placeholder="请输入商品标题" bindinput="bindTitle" value="{{shopTitle}}"/>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!--原料介绍 -->
+<view class="shopTitle  Row">
+    <view class="shopTitle_left">原料介绍</view>
+    <input type="text" placeholder="请输入视频原料" bindinput="bindYuanLiao" value="{{shopYuanLiao}}"/>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!--基础价格介绍 -->
+<view class="shopTitle  Row">
+    <view class="shopTitle_left">基础价格</view>
+    <input type="text" placeholder="请输入基础价格" bindinput="bindPriceBase" value="{{shopPrice}}"/>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!-- 商品属性 -->
+<view class="shuxingGroups">
+    <view class="shuxingGroupsButton" bindtap="bindAddMore">添加属性</view>
+    <block wx:for="{{shuxingAll}}" wx:key="index" wx:for-item="itemFather" wx:for-index="indexFather">
+        <view class="shuxingRow" wx:if="{{shuxingAll.length!=0}}">
+            <view class="shuxingRowLeft">
+                <input placeholder="输入商品属性" bindinput="bindShuXingName" data-index="{{indexFather}}" style="text-align: center;"/>
+                <view bindtap="bindAddSoon" data-index="{{indexFather}}">添加属性值</view>
+                <view bindtap="bindDelSoon" data-index="{{indexFather}}" style="background: red;">删除属性值</view>
+            </view>
+            <view class="shuxingRowRight">
+                <block wx:for="{{itemFather.detail}}" wx:for-item="itemSoon" wx:for-index="indexSoon">
+                    <view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-top: 15rpx;">
+                        <input placeholder="输入属性值" bindinput="bindShuXingValue" data-indexFather="{{indexFather}}" data-indexSoon="{{indexSoon}}"  style="width: 50%;text-align: center;"/>
+                        <input placeholder="输入对应价格" bindinput="bindShuXingPrice" data-indexFather="{{indexFather}}" data-indexSoon="{{indexSoon}}" style="width: 40%;margin-right: 20rpx;text-align: center;"/>
+                    </view>
+                </block> 
+            </view>
+        </view>
+        <view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+    </block>
+</view>
+<!-- 商品照片--> 
+<view class="shopPhotos  Row">
+    <view class="shopPhotos_left">商品照片</view>
+    <image src="/images/上传.png" style="width: 70rpx;height: 70rpx;margin-left: 20rpx;" bindtap="bindUpPhotos"></image>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!-- 商品详情图片 -->
+<view class="shopDetailPhotos  Row">
+    <view class="shopDetailPhotos_left">商品详情</view>
+    <image src="/images/上传.png" style="width: 70rpx;height: 70rpx;margin-left: 20rpx;" bindtap="bindUpDetail"></image>
+</view>
+<view style="width: 95%;margin:15rpx auto;border-top: 2rpx solid #D3D3D3;"></view>
+<!-- 购买提醒 -->
+<view class="shopDetailTips Row">
+    <view class="shopDetailTips_left">购买提醒</view>
+    <textarea bindinput="bindDetailTip" value="{{detailTips}}" placeholder="请写下购买提醒"></textarea>
+</view>
+<!-- 产品提交 -->
+<button style="width: 95%;background-color: forestgreen;border-radius: 20rpx;color: white;margin-top: 50rpx;" bindtap="bindSubmit">确定上架</button>
+<!-- 产品图片 -->
+<view wx:if="{{goodPhotosLast.length!=0}}" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 95%;margin:30rpx auto 0">
+        <view style="width: 35%;border:solid #D3D3D3 2rpx;margin-right: 10rpx;"></view>
+        <view>
+            商品照片
+        </view>
+        <view style="width: 35%;border:solid #D3D3D3 2rpx;margin-left: 10rpx;"></view>
+</view>
+<view class="photosOne" wx:if="{{goodPhotosLast.length!=0}}">
+    <view wx:for="{{goodPhotosLast}}" wx:key="index" class="photosOne_Row">
+        <image src="/images/删除 (1).png" class="photosOne_Row_ImgOne" style="width: 30rpx;height: 30rpx;" bindtap="bindDel" data-index="{{index}}"/>
+        <image  src="{{item}}" class="photosOne_Row_Two" style="width: 100%;height: 100%;"/>
+    </view>
+</view>
+<!-- 产品详情图片 -->
+<view wx:if="{{goodDetail.length!=0}}" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 95%;margin:50rpx auto 0">
+        <view style="width: 35%;border:solid #D3D3D3 2rpx;margin-right: 10rpx;"></view>
+        <view>
+            商品详情
+        </view>
+        <view style="width: 35%;border:solid #D3D3D3 2rpx;margin-left: 10rpx;"></view>
+</view>
+<view class="photosOne" wx:if="{{goodDetail.length!=0}}">
+    <view wx:for="{{goodDetail}}" wx:key="index" class="photosOne_Row">
+        <image src="/images/删除 (1).png" class="photosOne_Row_ImgOne" style="width: 30rpx;height: 30rpx;" bindtap="bindDelTwo" data-index="{{index}}"/>
+        <image  src="{{item}}" class="photosOne_Row_Two" style="width: 100%;height: 100%;"/>
+    </view>
+</view>

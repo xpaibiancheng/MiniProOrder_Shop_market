@@ -1,0 +1,3 @@
+<!--pages/payOrder/payOrder.wxml-->
+<input style="width: 70%;height: 70rpx;border:solid #ccc;margin:20rpx auto;border-radius: 20rpx;" type="number" placeholder="设置预约座位价格" bindinput="bindColl" />
+<button type="primary" bindtap="bindSubPrice">确定</button>

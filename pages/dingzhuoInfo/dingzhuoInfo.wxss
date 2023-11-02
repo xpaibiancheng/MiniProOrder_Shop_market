@@ -1,0 +1,74 @@
+/* pages/dingzhuoInfo/dingzhuoInfo.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.imageNone{
+    width: 150rpx;
+    height: 150rpx;
+    margin-bottom: 20rpx;
+}
+.noneTable{
+    width: 95%;
+    margin: 100rpx auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(107, 107, 107);
+}
+.noneClick{
+    width: 200rpx;
+    height: 80rpx;
+    border-radius: 30rpx;
+    background-color: seagreen;
+    color: white;
+    font-weight: 550;
+    text-align: center;
+    line-height: 2;
+    margin-top: 30rpx;
+}
+.haveTable{
+    width: 95%;
+    height: 330rpx;
+    margin: 20rpx auto;
+    border-radius: 20rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+.haveTableLeft{
+    width: 30%;
+    height: 100%;
+    background-color: tomato;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.haveTableRight{
+    width: 70%;
+    height: 100%;
+}
+.haveTableRightOne{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+.haveTableRightTwo{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    
+}
+.haveTableRightThree{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+
+}

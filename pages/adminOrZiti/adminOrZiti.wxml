@@ -1,0 +1,106 @@
+<!--pages/adminYuyue/adminYuyue.wxml-->
+<!-- 导航栏 -->
+<view class="navtop">
+    <view class="navtopRow {{handIndex==index ? 'clickStyle':''}}"  wx:for="{{valueList}}" bindtap="bindClick" data-value="{{item}}" data-index="{{index}}" wx:key="index">{{item}}</view>
+</view>
+<!-- 申请记录 -->
+<view class="status" wx:for="{{waitReplay}}" wx:key="index" wx:if="{{handIndex==0 && waitReplay.length>0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">订单号</view>
+        <view class="rowsInfo">{{item.orderNumber}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">类型</view>
+        <view class="rowsInfo">{{item.style}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">核销码</view>
+        <view class="rowsInfo">{{item.orderCode}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">实付金额</view>
+        <view class="rowsInfo" style="color: orange;font-size: 550;">￥{{item.order_price}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付状态</view>
+        <view class="rowsInfo">{{item.pay_status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">处理状态</view>
+        <view class="rowsInfo">{{item.status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">下单时间</view>
+        <view class="rowsInfo">{{item.subTime}}</view>
+    </view>
+    <view class="shopOrder" wx:for="{{item.orderGroups}}" wx:for-index="shopIndex" wx:for-item="shopItem">
+        <view class="shopOrderText">
+            <!-- 标题 -->
+            <text style="color: white;">商品:</text><view class="shopOrderTextTitle" style="color: steelblue;">{{shopItem.goodGroups.shopTitle}}</view>
+            <!-- 价格 -->
+            <text style="color: white;">价格:</text><view style="padding-top: 20rpx;padding-bottom: 20rpx;color: tomato;">￥{{shopItem.priceAll}}×{{shopItem.orderNum}}</view>
+            <!-- 属性 -->
+            <text style="color: white">规格:</text><view style="padding-bottom: 15rpx;padding-top: 15rpx;color:darkred" wx:for="{{shopItem.orderShuXing}}" wx:for-item="shuxingItem" class="shopOrderTextPrice">
+                {{shuxingItem.value}} +
+            </view>
+        </view>
+    </view>
+    <view style="display:flex;flex-direction: row;align-items: center;">
+        <view bindtap="bindPass" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid green;text-align: center;margin-top: 20rpx;color: green;margin-left: 20rpx;">出餐</view>
+    </view>
+</view>
+<!-- 已审核记录 -->
+<view class="status" wx:for="{{haveReplay}}" wx:key="index" wx:if="{{handIndex==1 && haveReplay.length>0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">订单号</view>
+        <view class="rowsInfo">{{item.orderNumber}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">类型</view>
+        <view class="rowsInfo">{{item.style}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">核销码</view>
+        <view class="rowsInfo">{{item.orderCode}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">实付金额</view>
+        <view class="rowsInfo" style="color: orange;font-size: 550;">￥{{item.order_price}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付状态</view>
+        <view class="rowsInfo">{{item.pay_status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">处理状态</view>
+        <view class="rowsInfo">{{item.status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">下单时间</view>
+        <view class="rowsInfo">{{item.subTime}}</view>
+    </view>
+    <view class="shopOrder" wx:for="{{item.orderGroups}}" wx:for-index="shopIndex" wx:for-item="shopItem">
+        <view class="shopOrderText">
+            <!-- 标题 -->
+            <text style="color: white;">商品:</text><view class="shopOrderTextTitle" style="color: steelblue;">{{shopItem.goodGroups.shopTitle}}</view>
+            <!-- 价格 -->
+            <text style="color: white;">价格:</text><view style="padding-top: 20rpx;padding-bottom: 20rpx;color: tomato;">￥{{shopItem.priceAll}}×{{shopItem.orderNum}}</view>
+            <!-- 属性 -->
+            <text style="color: white">规格:</text><view style="padding-bottom: 15rpx;padding-top: 15rpx;color:darkred" wx:for="{{shopItem.orderShuXing}}" wx:for-item="shuxingItem" class="shopOrderTextPrice">
+                {{shuxingItem.value}} +
+            </view>
+        </view>
+    </view>
+    <view style="display:flex;flex-direction: row;align-items: center;">
+        <view bindtap="bindDel" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid red;text-align: center;margin-top: 20rpx;color: red;margin-left: 20rpx;">删除</view>
+    </view>
+</view>
+<!-- 暂无申请记录 -->
+<view wx:if="{{handIndex==0 && waitReplay.length==0}}" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image src="/static/暂无数据.png"></image>
+    <view>暂无申请</view>
+</view>
+<view wx:if="{{handIndex==1 && haveReplay.length==0}}" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image src="/static/暂无数据.png"></image>
+    <view>暂无审核</view>
+</view>

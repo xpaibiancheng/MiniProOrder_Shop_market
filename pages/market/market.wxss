@@ -1,0 +1,97 @@
+/* pages/market/market.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.marketAll{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
+.marLaft{
+    width: 25%;
+    height: 95%;
+    background-color: white;
+}
+.marLaftText{
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 2;
+    margin-top: 20rpx;
+    font-size: 37rpx;
+    
+}
+.markLaTextBind{
+    background-color: rgba(245, 249, 250, 1);
+    color:#99CC99 ;
+    font-size: 40rpx;
+    font-weight: 550;
+}
+.marRight{
+    width: 75%;
+    height: 95%;
+    margin-left: 20rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+/* search */
+.index_search{
+    width: 95%;
+    height: 90rpx;
+    border-radius: 30rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    margin: 30rpx auto 0rpx;
+    align-items: center;
+    background-color: white;
+    color: rgb(107, 107, 107);
+    
+}
+.index_search>image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-left:30rpx;
+    margin-right: 30rpx;
+}
+.marRightRow{
+    width: 33%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rpx;
+}
+.marRightRow>image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-bottom: 20rpx;
+}
+.marRightScroll{
+    width: 95%;
+    margin: 20rpx auto;
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+.marRightRowView{
+    width: 90%;
+    text-align: center;
+    /* 弹性盒子布局 */
+    display: -webkit-box;
+    /* 超出 文本省略号*/
+    text-overflow: ellipsis;
+    /* 隐藏超出文本*/
+    overflow: hidden;
+    /* 允许最大文本行数 */
+    -webkit-line-clamp: 1;
+    /* 自动换行 */
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}

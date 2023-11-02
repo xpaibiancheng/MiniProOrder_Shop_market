@@ -1,0 +1,10 @@
+{
+    "usingComponents": {},
+    "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于选择收货地址"
+        }
+      },
+      "navigationBarTitleText": "商品同城",
+    "navigationBarBackgroundColor": "#99CC99"
+}

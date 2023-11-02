@@ -1,0 +1,82 @@
+/* pages/buyStyle/buyStyle.wxss */
+.rows{
+    width: 95%;
+    height: 250rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40rpx auto;
+}
+.rowsSplic{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.rows_left{
+    width: 40%;
+    border-top: 5rpx solid #D3D3D3;
+}
+.rows_Right{
+    width: 40%;
+    border-top: 5rpx solid #D3D3D3;
+}
+
+.rowsMiddle{
+    width: 20%;
+    text-align: center;
+    font-size: 40rpx;
+}
+.rowsStyle{
+    width: 95%;
+    margin: 80rpx auto 0;
+}
+.rowsStyle>button{
+    border-radius: 20rpx;
+    background-color: seagreen;
+    color: white;
+}
+/* 公告栏 */
+@keyframes remindMessage {
+    0% {
+     -webkit-transform: translateX(90%);
+    }
+   
+    100% {
+     -webkit-transform: translateX(-180%);
+    }
+}
+   
+.tongzhitext {
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tongzhi-text {
+    font-size:40rpx;
+    animation: remindMessage 14s linear infinite;
+    width: 100%;
+    color:#99CC99;
+    display: block;
+    font-weight: 550;
+}
+
+.notice-wrap {
+    width: 100%;
+    margin: 10rpx auto;
+    display: flex;
+    flex-direction: row;                                                                                    
+}
+
+.closeView {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+    font-size: 40rpx;
+    margin-right: 20rpx;
+}

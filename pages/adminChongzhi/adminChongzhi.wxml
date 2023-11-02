@@ -1,0 +1,12 @@
+<!--pages/adminChongzhi/adminChongzhi.wxml-->
+<view class="top">
+    <input placeholder="输入用户手机号" bindinput="searchInput" placeholder-style="text-align:center" />
+    <button type="primary" bindtap="searchBtn">查询</button>
+</view>
+<!-- 用户信息 -->
+<view class="userinfo" wx:if="{{result.length!=0}}" wx:for="{{result}}" wx:key="index">
+    <view>姓名:{{item.userName}}</view>
+    <view>余额:{{item.userAccount}}</view>
+    <view bindtap="bindPayIt" data-index="{{index}}" style="margin-left: 20rpx;line-height: 2;text-align: center;color: white;width: 150rpx;height: 70rpx;border-radius: 30rpx;background-color: cadetblue;">点击充值</view>
+    <view style="width: 100%;height: 30rpx;"></view>
+</view>

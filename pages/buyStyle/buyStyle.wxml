@@ -1,0 +1,40 @@
+<!--pages/buyStyle/buyStyle.wxml-->
+<view class='notice-wrap' hidden='{{hideNotice}}'>
+　　<view class='tongzhitext'>
+        <text class="tongzhi-text">{{notice}}</text>
+　　</view>
+　　<view bindtap='switchNotice' class="closeView">x</view>
+</view>
+<view class="rows">
+    <!-- 自提 -->
+    <view class="rowsSplic">
+        <view class="rows_left"></view>
+        <view class="rowsMiddle">自提</view>
+        <view class="rows_Right"></view>
+    </view>
+    <view class="rowsStyle">
+        <button bindtap="bindNavZiti">商品自提</button>
+    </view>
+</view>
+<view class="rows">
+    <!-- 自提 -->
+    <view class="rowsSplic">
+        <view class="rows_left"></view>
+        <view class="rowsMiddle">送货</view>
+        <view class="rows_Right"></view>
+    </view>
+    <view class="rowsStyle">
+        <button bindtap="bindTongcheng">上门送货</button>
+    </view>
+</view>
+<view class="rows">
+    <!-- 自提 -->
+    <view class="rowsSplic">
+        <view class="rows_left"></view>
+        <view class="rowsMiddle">快递</view>
+        <view class="rows_Right"></view>
+    </view>
+    <view class="rowsStyle">
+        <button bindtap="bindKuaiDi">快递发货</button>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/adminPsRule/adminPsRule.wxml-->
+<!-- 提交类型 -->
+<form bindsubmit="formSubmit">
+    <input type="text" value="{{result.base}}" placeholder="基础费用" placeholder-style="text-align:center" name="key"/>
+    <input type="text" value="{{result.km}}" placeholder="几公里内" placeholder-style="text-align:center" name="value"/>
+    <input type="text" value="{{result.more_than}}" placeholder="超出一公里加多少附加费" placeholder-style="text-align:center" name="morethan"/>
+    <button type="primary" formType="submit">提交</button>
+</form>
+<view style="padding:20rpx 0;background-color: cadetblue;width: 95%;margin: 50rpx auto;color: white;border-radius: 10rpx;">基础费用:<text style="color:black;">{{result.base}}元</text>。范围在<text style="color:black;">{{result.km}}Km</text>内派送费是{{result.base}}元,每超过一公里加<text style="color:black;">{{result.more_than}}元</text></view>

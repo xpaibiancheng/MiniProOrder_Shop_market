@@ -1,0 +1,97 @@
+<!--pages/detail/detail.wxml-->
+<!-- 商品图片 -->
+<view class="detail_Swiper">
+  <swiper indicator-dots indicator-active-color="#fff" circular autoplay interval="3000" style="width: 100%;height: 500rpx;">
+    <block wx:for="{{images}}" wx:key="index">
+        <swiper-item>
+          <image bindtap="bindPreView" src="{{item}}" style="width: 100%;height: 500rpx;"></image>
+        </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 商品信息 -->
+<view class="shopInfo">
+    <view class="shopPrice">
+        <text class="nowPrice">¥{{shopRows.shopPrice}}</text>
+        <text class="oldPrice">¥999</text>
+    </view>
+    <view class="shopTitle">
+        {{shopRows.shopTitle}}
+    </view>
+    <view class="shopAction">
+        <view class="shopActionLeft">
+            <image src="/static/喜爱.png"></image>
+            <text>月销110+</text>
+        </view>
+        <view class="shopActionLeft">
+            <image src="/static/分享 (1).png"></image>
+            <text>分享</text>
+        </view>
+    </view>
+</view>
+
+
+<!-- 其它信息 -->
+<view class="otherInfo">
+    <view class="cardGet">
+        <view class="cardGetLeft">领券</view>
+        <view class="cardMiddle" bindtap="bindGetQuan">
+            <view class="miiddleRow" wx:if="{{shopRows.youhui[0].detail.length==0 || !shopRows.youhui[0].detail.length}}"  style="margin-left: 20rpx;">暂无优惠券</view>
+            <view class="miiddleRow" wx:if="{{shopRows.youhui[0].detail.length!=0}}" wx:for="{{shopRows.youhui[0].detail}}"  wx:key="index" style="margin-left: 20rpx;">满{{item.value}}减{{item.price}}</view>
+        </view>
+        <view>></view>
+    </view>
+    <view class="shopAccpetddress">
+        <view class="accAddLeft">送至</view>
+        <view class="accAddMidd">
+            <image src="/static/定位.png"></image>
+            <view class="addressDeatil" style="margin-left: 15rpx;" wx:if="{{address.length!=0}}" bindtap="SelectNewAAddr">{{addrDefault.region[0]}} {{addrDefault.region[1]}} {{addrDefault.region[2]}} {{addrDefault.address}}</view>
+            <view class="addressDeatil" style="margin-left: 15rpx;" wx:if="{{address.length==0}}" bindtap="addAdrress">暂无地址,请点击此处增加地址<text style="color: red;">(下拉刷新)</text></view>
+        </view>
+        <view>></view>
+    </view>
+    <view class="shuoming">
+        <view class="shuomingLeft">说明</view>
+        <view class="shuomingMidd">
+            <image src="/static/确定.png"></image>
+            <view class="shuomingDeatil" style="margin-left: 15rpx;">暂无说明</view>
+        </view>
+        <view>></view>
+    </view>
+</view>
+
+
+<!-- 详细页面 -->
+<view class="detail_explain">
+  <view style="margin-top: 15rpx;margin-left: 15rpx;text-align: center;padding-top: 20rpx;color: rgba(249, 108, 47, 1);font-weight: 550;">---------  商品详情  ---------</view>
+  <view class="image_explain">
+    <block wx:for="{{shopRows.goodDetail}}" wx:key="index">
+      <image src="{{item}}" style="max-width: 100%;max-height:100%;" bindtap="bindLookIImga" data-url="{{item}}" mode="widthFix"></image>
+    </block>
+  </view>
+  <view style="width: 100%;height: 100rpx;"></view>
+</view>
+
+
+<!-- 底部 -->
+<view class="actionUser">
+    <view class="actionRows" style="background-color: steelblue;color:white;">
+        <button open-type="contact" bindcontact="handleContact" session-from="sessionFrom" style="width: 100%;background: steelblue;color: white;">联系客服</button>
+    </view>
+    <view class="actionRows" style="background-color: #333333;color: white;" bindtap="bindShopCar">加入购物车</view>
+    <view class="actionRows" style="background-color: #F83D3D;color: white;" bindtap="bindBuyNow" >立即购买</view>
+</view>
+
+
+<!-- 收货地址 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view style="width: 95%;border-top:5rpx solid #ccc;margin:10rpx auto"></view>
+        <!--自定义弹窗内容-->
+        <scroll-view scroll-y style="width: 100%;height: 500rpx;">
+            <view class="addressDeatil" style="background-color: cadetblue;width: 95%;margin:20rpx auto;border-radius: 15rpx;padding:30rpx 0rpx;color: black;" wx:for="{{address}}" wx:key="index" bindtap="selectThis" data-index="{{index}}">{{item.region[0]}} {{item.region[1]}} {{item.region[2]}} {{item.address}}</view>
+        </scroll-view>
+        <view style="text-align: center;color: red;">点击地址选择</view>
+    </view>
+

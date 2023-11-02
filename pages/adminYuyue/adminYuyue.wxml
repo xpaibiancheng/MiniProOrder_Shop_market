@@ -1,0 +1,100 @@
+<!--pages/adminYuyue/adminYuyue.wxml-->
+<!-- 导航栏 -->
+<view class="navtop">
+    <view class="navtopRow {{handIndex==index ? 'clickStyle':''}}"  wx:for="{{valueList}}" bindtap="bindClick" data-value="{{item}}" data-index="{{index}}" wx:key="index">{{item}}</view>
+</view>
+<!-- 申请记录 -->
+<view class="status" wx:for="{{waitReplay}}" wx:key="index" wx:if="{{handIndex==0 && waitReplay.length>0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">姓名</view>
+        <view class="rowsInfo">{{item.name}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">手机号</view>
+        <view class="rowsInfo">{{item.phone}}</view>
+    </view>
+    <view class="statusRows" style="color: cornflowerblue;">
+        <view class="rows">人数</view>
+        <view class="rowsInfo">{{item.num}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">核销码</view>
+        <view class="rowsInfo">{{item.oderCode}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">到店时间</view>
+        <view class="rowsInfo" style="color: rgb(160, 31, 31);">{{item.date}} {{item.time}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">预定时间</view>
+        <view class="rowsInfo">{{item.oderTime}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付金额</view>
+        <view class="rowsInfo">{{item.order_price}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付状态</view>
+        <view class="rowsInfo">{{item.pay_status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">处理状态</view>
+        <view class="rowsInfo">{{item.replay}}</view>
+    </view>
+    <view style="display:flex;flex-direction: row;align-items: center;">
+        <view bindtap="bindPass" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid green;text-align: center;margin-top: 20rpx;color: green;margin-left: 20rpx;">申请通过</view>
+        <view bindtap="bindRefuse" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid red;text-align: center;margin-top: 20rpx;color: red;margin-left: 20rpx;">申请拒绝</view>
+    </view>
+</view>
+<!-- 已审核记录 -->
+<view class="status" wx:for="{{haveReplay}}" wx:key="index" wx:if="{{handIndex==1 && haveReplay.length>0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">姓名</view>
+        <view class="rowsInfo">{{item.name}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">手机号</view>
+        <view class="rowsInfo">{{item.phone}}</view>
+    </view>
+    <view class="statusRows" style="color: cornflowerblue;">
+        <view class="rows">人数</view>
+        <view class="rowsInfo">{{item.num}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">核销码</view>
+        <view class="rowsInfo">{{item.oderCode}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">到店时间</view>
+        <view class="rowsInfo" style="color: rgb(160, 31, 31);">{{item.date}} {{item.time}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">预定时间</view>
+        <view class="rowsInfo">{{item.oderTime}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付金额</view>
+        <view class="rowsInfo">{{item.order_price}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付状态</view>
+        <view class="rowsInfo">{{item.pay_status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">处理状态</view>
+        <view class="rowsInfo">{{item.replay}}</view>
+    </view>
+    <view style="display:flex;flex-direction: row;align-items: center;">
+        <view bindtap="bindQvxiao" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid green;text-align: center;margin-top: 20rpx;color: green;margin-left: 20rpx;">超时取消</view>
+        <view bindtap="bindDel" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid red;text-align: center;margin-top: 20rpx;color: red;margin-left: 20rpx;">删除</view>
+    </view>
+</view>
+<!-- 暂无申请记录 -->
+<view wx:if="{{handIndex==0 && waitReplay.length==0}}" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image src="/static/暂无数据.png"></image>
+    <view>暂无申请</view>
+</view>
+<view wx:if="{{handIndex==1 && haveReplay.length==0}}" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image src="/static/暂无数据.png"></image>
+    <view>暂无审核</view>
+</view>

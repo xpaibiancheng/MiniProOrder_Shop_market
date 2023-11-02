@@ -1,0 +1,111 @@
+/* pages/dingzuo/dingzuo.wxss */
+.row{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20rpx auto;
+   height: 60rpx;
+}
+.row>input{
+    margin-left: 20rpx;
+}
+.time-picker{
+    color: rgb(107, 107, 107);
+}
+.row_fenge{
+    width: 35%;
+    border-top: #D3D3D3 solid 2rpx;
+}
+.row_lr_fenge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rpx;
+}
+.orderNumInfo{
+    width: 90%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+.orderNumInfoRow{
+    width: 40%;
+    height: 100rpx;
+    margin: 20rpx 20rpx;
+    justify-content: center;
+    align-items: center;
+    border: #C0C0C0 solid 2rpx;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 37rpx;
+    border-radius: 20rpx;
+}
+.selectQueding{
+    color: seagreen;
+    border: seagreen solid 2rpx;
+    font-weight: 550;
+}
+.shopOrder{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin: 20rpx auto;
+    background-color:#f8f0f0;
+    border-radius: 20rpx;
+}
+.shopOrderImg{
+    width: 25%;
+    height: 180rpx;
+    border-radius: 15rpx;
+    margin-left: 20rpx;
+}
+.shopOrderText{
+    width: 70%;
+    height: 200rpx;
+    font-size: 35rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shopOrderTextTitle{
+    height: 45%;
+    width: 95%;
+    /* 弹性盒子布局 */
+    display: -webkit-box;
+    /* 超出 文本省略号*/
+    text-overflow: ellipsis;
+    /* 隐藏超出文本*/
+    overflow: hidden;
+    /* 允许最大文本行数 */
+    -webkit-line-clamp: 2;
+    /* 自动换行 */
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}
+.shopSum{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 20rpx;
+    height: 70rpx;
+    font-size: 40rpx;
+}
+.PriceAndNum{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+}

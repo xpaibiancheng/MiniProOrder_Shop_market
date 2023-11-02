@@ -1,0 +1,121 @@
+/* pages/orderDingDan/orderDingDan.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.dingdanRows{
+    width: 95%;
+    background-color: white;
+    border-radius: 20rpx;
+    margin: 20rpx auto;
+}
+.dingdanRowsTop{
+    width: 95%;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20rpx;
+}
+.RowsTopLeft{
+    background-color: rgb(175, 147, 76);
+    color: white;
+    text-align: center;
+    width: 12%;
+    height: 37rpx;
+    border-radius: 5rpx;
+    font-size: 27rpx;
+}
+.RowsTopMidd{
+    width: 58%;
+    margin-left: 20rpx;
+}
+.RowsTopRight{
+    text-align: right;
+}
+.dingdanRowsMidd{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.RowsMiddLeft{
+    width: 25%;
+}
+.RowsMiddLeftImg{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.RowsMiddMidd{
+    width: 70%;
+}
+.RowsMiddMiddOne{
+    font-weight: 550;
+    font-size: 35rpx;
+    padding-left: 15rpx;
+}
+.RowsMiddMiddTwo{
+    padding-left: 15rpx;
+    margin-top: 20rpx;
+    color: rgb(107, 107, 107);
+}
+.RowsMiddRight{
+    text-align: right;
+    color: rgb(107, 107, 107);
+}
+.RowsMiddRight{
+    width: 10%;
+}
+.dingdanRowsBottom{
+    width: 95%;
+    margin: auto;
+    padding-top: 20rpx;
+}
+.RowsBottomOne{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.RowsBottomOneTime{
+    color: rgb(107, 107, 107);
+
+}
+.RowsBottomTwo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40rpx;
+    padding-bottom: 20rpx;
+}
+.RowsBottomTwoAgin{
+    width: 23%;
+    height: 55rpx;
+    border-radius: 50rpx;
+    border: 5rpx solid #99CC99;
+    color: #99CC99;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.RowsBottomTwoCard{
+    width: 23%;
+    height: 55rpx;
+    border-radius: 50rpx;
+    border: 5rpx solid #99CC99;
+    color: #99CC99;
+    margin-left: 15rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+<!--pages/start/start.wxml-->
+<view class="paddingAll">
+    <view style="font-size: 90rpx;margin-bottom: 40rpx;font-family:华文隶书;">
+         一点茶事
+    </view>
+    <image src="/images/茶.png" style="width: 120rpx;height: 120rpx;"></image>
+</view>

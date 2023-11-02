@@ -1,0 +1,16 @@
+<!--pages/adminPayRule/adminPayRule.wxml-->
+<!-- 提交类型 -->
+<form bindsubmit="formSubmit">
+    <input type="text" placeholder="冲都少" placeholder-style="text-align:center" name="key"/>
+    <input type="text" placeholder="送多少" placeholder-style="text-align:center" name="value"/>
+    <button type="primary" formType="submit">提交</button>
+</form>
+<!-- splice -->
+<view style="width: 100%;height: 50rpx;"></view>
+<!-- 规则 -->
+<view class="ruleRows" wx:for="{{result}}" wx:key="index">
+    <view style="margin-left: 20rpx;width:180rpx;">冲<text style="color: coral;">{{item.rule.key}}</text></view>
+    <view style="width: 180rpx;">送<text style="color:cornflowerblue">{{item.rule.value}}</text></view>
+    <switch checked="{{item.status}}" bindtap="changeStatus" data-id="{{item._id}}" data-status="{{item.status}}"></switch>
+    <image src="/images/删除 (1).png" style="width: 50rpx;height: 50rpx;margin-right: 20rpx;" data-id="{{item._id}}" bindtap="delRule"></image>
+</view>

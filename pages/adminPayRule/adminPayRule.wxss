@@ -1,0 +1,27 @@
+/* pages/adminPayRule/adminPayRule.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+input{
+    width: 95%;
+    height: 70rpx;
+    border: #ccc 3rpx solid;
+    border-radius: 15rpx;
+    margin: 20rpx auto;
+}
+button{
+    border-radius: 30rpx;
+    margin-top: 30rpx;
+}
+.ruleRows{
+    margin: 20rpx auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20rpx;
+    padding: 25rpx 0;
+    font-size: 40rpx;
+}

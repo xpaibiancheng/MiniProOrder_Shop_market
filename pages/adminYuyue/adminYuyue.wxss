@@ -1,0 +1,46 @@
+/* pages/adminUserEnd/adminUserEnd.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.navtop{
+    width: 100%;
+    height: 80rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navtopRow{
+    width: 50%;
+    padding-bottom: 15rpx;
+    text-align: center;
+}
+.clickStyle{
+    color: rgba(249, 108, 47, 1);
+    border-bottom: 5rpx solid rgba(249, 108, 47, 1);
+    font-weight: 550;
+}
+.status{
+    width: 95%;
+    
+    background-color: white;
+    border-radius: 20rpx;
+    margin: 20rpx auto;
+    padding-bottom: 20rpx;
+}
+.statusRows{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2rpx dotted #ccc;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    padding-bottom: 15rpx;
+}
+.rows{
+    width: 100rpx;
+}
+.rowsInfo{
+    padding-left: 15rpx;
+    line-height: 1.5;
+}

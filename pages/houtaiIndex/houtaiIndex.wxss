@@ -1,0 +1,178 @@
+/* pages/service/service.wxss */
+/* pages/tool/tool.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.rows{
+    width: 97%;
+    margin: 20rpx auto;
+  }
+  .title{
+    font-weight: 550;
+    margin-left: 20rpx;
+  }
+  .tools{
+    width:97%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+    
+  }
+  .list{
+    width: 48%;
+    height: 330rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-top: 15rpx;
+    margin-left: 10rpx;
+  }
+  .list>image{
+      width: 95%;
+      height: 200rpx;
+      margin-top: 10rpx;
+  }
+  .listText{
+      width: 95%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 27rpx;
+    margin-top: 15rpx;
+  }
+  .txt_row02{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 300rpx;
+    height: 10rpx;
+    border-radius: 30rpx;
+    background:-webkit-linear-gradient(left,rgb(92,104,206),rgb(171,179,241),white);
+  }
+.functions{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+    margin:auto;
+}
+.functionGroup{
+    width: 30%;
+    height: 140rpx;
+    background-color: white;
+    border-radius: 15rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rpx;
+    margin-top:20rpx;
+}
+.functionGroup>image{
+    width: 80rpx;
+    height: 80rpx;
+}
+.functionGroup>view{
+    margin-top: 10rpx;
+    font-size: 25rpx;
+}
+/* 管理员通道 */
+.adminStaock{
+    width: 80%;
+    height: 350rpx;
+    background: rgba(245, 249, 250, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.adminTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15rpx;
+    padding-top: 15rpx;
+    border-bottom: solid 2rpx #ccc;
+}
+.adminStaock>input{
+    width: 80%;
+    height: 80rpx;
+    margin: 50rpx auto;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.clickSelectw{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30rpx;
+
+}
+.clickSelectw>view{
+    width: 150rpx;
+    height: 65rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    font-weight: 550;
+}
+
+
+/* 管理员 */
+.adminStaock{
+    width: 80%;
+
+    background: rgba(245, 249, 250, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.adminTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15rpx;
+    padding-top: 15rpx;
+    border-bottom: solid 2rpx #ccc;
+}
+.adminStaock>input{
+    width: 80%;
+    height: 80rpx;
+    margin: 20rpx auto;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.clickSelectw{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30rpx;
+    padding-bottom: 20rpx;
+
+}
+.clickSelectw>view{
+    width: 150rpx;
+    height: 65rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    font-weight: 550;
+}

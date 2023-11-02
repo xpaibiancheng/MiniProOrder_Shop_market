@@ -1,0 +1,17 @@
+<!--pages/orderClass/orderClass.wxml-->
+<scroll-view scroll-y style="width: 100%;height: 100%;">
+    <view class="tea_Name">
+        <view class="shopClass" bindtap="bindNavDetail" wx:for="{{shopGroups}}" wx:key="index" data-detail="{{item}}">
+            <!-- 图片 -->
+            <image class="shopClass_Image" src="{{item.goodPhotosLast[0]}}"></image>
+            <!-- 标题 -->
+            <view class="shopClass_title">{{item.shopTitle}}</view>
+            <view class="shopClass_price_count">
+                <!-- 价格 -->
+                <view style="color: sandybrown;font-size: 35rpx;font-weight: 550;">￥{{item.shopPrice}}</view>
+                <!-- 下单 -->
+                <view style="color: rgb(107, 107, 107);font-size: 27rpx;">{{item.shopSaleNum}}人付款</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

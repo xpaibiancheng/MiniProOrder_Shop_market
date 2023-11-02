@@ -1,0 +1,47 @@
+<!--pages/adminYyHexiao/adminYyHexiao.wxml-->
+<view class="top">
+    <input placeholder="输入核销码" bindinput="searchInput" placeholder-style="text-align:center" />
+    <button type="primary" bindtap="searchBtn">查询</button>
+</view>
+<!-- 订单状态 -->
+<view class="status" wx:for="{{result}}" wx:key="index" wx:if="{{result.length!=0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">姓名</view>
+        <view class="rowsInfo">{{item.name}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">手机号</view>
+        <view class="rowsInfo">{{item.phone}}</view>
+    </view>
+    <view class="statusRows" style="color: cornflowerblue;">
+        <view class="rows">人数</view>
+        <view class="rowsInfo">{{item.num}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">核销码</view>
+        <view class="rowsInfo">{{item.oderCode}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">到店时间</view>
+        <view class="rowsInfo" style="color: rgb(160, 31, 31);">{{item.date}} {{item.time}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">预定时间</view>
+        <view class="rowsInfo">{{item.oderTime}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付金额</view>
+        <view class="rowsInfo">{{item.order_price}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">支付状态</view>
+        <view class="rowsInfo">{{item.pay_status}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">处理状态</view>
+        <view class="rowsInfo">{{item.replay}}</view>
+    </view>
+    <view style="display:flex;flex-direction: row;align-items: center;">
+        <view bindtap="bindPass" data-index="{{index}}" style="width: 150rpx;height: 50rpx;border-radius:30rpx;border:4rpx solid green;text-align: center;margin-top: 20rpx;color: green;margin-left: 20rpx;">核销</view>
+    </view>
+</view>

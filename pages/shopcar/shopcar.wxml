@@ -1,0 +1,71 @@
+<!--pages/shopcar/shopcar.wxml-->
+<!-- 温馨提示：长按点击删除购物车内容 -->
+<view class='notice-wrap' hidden='{{hideNotice}}'>
+　　<view class='tongzhitext'>
+        <text class="tongzhi-text">{{notice}}</text>
+　　</view>
+　　<view bindtap='switchNotice' class="closeView">x</view>
+</view>
+<!-- 默认收货地址 -->
+<view class="accAddMidd">
+    <image src="/static/定位.png"></image>
+    <view class="addressDeatil" style="margin-left: 15rpx;" wx:if="{{address.length!=0}}" bindtap="SelectNewAAddr">{{addrDefault.region[0]}} {{addrDefault.region[1]}} {{addrDefault.region[2]}} {{addrDefault.address}}</view>
+    <view class="addressDeatil" style="margin-left: 15rpx;" wx:if="{{address.length==0}}" bindtap="addAdrress">暂无地址,请点击此处增加地址<text style="color: red;">(下拉刷新)</text></view>
+</view>
+<!-- 购物车为空的情况 -->
+<view style="width: 95%;margin: 20rpx auto;display: flex;flex-direction: column;justify-content: center;align-items: center;" wx:if="{{shopGroups.length==0}}">
+    <image style="width: 150rpx;height: 150rpx;" src="/images/暂无订单.png" mode=""/>
+    <view style="margin-top: 15rpx;color: rgb(107, 107, 107);">亲爱的小主，购物车空空如也~</view>
+</view>
+<!-- 购物车每一个 -->
+<scroll-view scroll-y style="width: 100%;height: 90%;background-color: rgb(247, 247, 247);" wx:if="{{shopGroups.length!=0}}">
+    <block  wx:for="{{shopGroups}}" wx:key="index">
+        <view class="shopCarGroups" bindlongpress="bindDelShop" data-index="{{index}}">
+            <!-- 按钮 -->
+            <view class="groupRadio">
+                <radio-group>
+                    <radio checked="{{selectFlag[index].flag}}" bindtap="handleChange" data-index="{{index}}" data-value="{{item.shopAll.shopPrice}}"></radio>
+                </radio-group>
+            </view>
+            <!-- 商品图片 -->
+            <view class="shopImage" bindtap="bindDelShop" data-index="{{index}}">
+                <image class="grouupImage" src="{{item.shopAll.goodPhotosLast[0]}}"></image>
+            </view>
+            <!-- 商品详情 -->
+            <view class="groupDetail" bindtap="bindDelShop" data-index="{{index}}" >
+                <!-- 商品标题 -->
+                <view class="groupTitle">{{item.shopAll.shopTitle}}</view>
+                <!--左右结构 -->
+                <view class="groupRight">
+                    <!-- 商品价格 -->
+                    <view class="groupRight_price">￥{{item.shopAll.shopPrice}}</view>
+                    <view>数量 ×1</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    
+</scroll-view>
+<view style="width: 100%;height: 130rpx;"></view>
+<!-- 合计 -->
+<view class="shopCar_select_delete" wx:if="{{shopGroups.length!=0}}">
+    <view class="select" style="margin-left: 30rpx;">
+    <radio-group>
+        <radio bindtap="bindSelectAll" checked="{{selectAll}}"></radio>
+    </radio-group>
+        全选
+    </view>
+    <view style="color: rgba(249, 108, 47, 1);">￥{{priceTotal}}</view>
+    <view class="delete" style="width: 200rpx;height: 100rpx;background-color: brown;color: white;" bindtap="bindPay">结算</view>
+</view>
+
+<!-- 收货地址 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view style="width: 95%;border-top:5rpx solid #ccc;margin:10rpx auto"></view>
+        <!--自定义弹窗内容-->
+        <scroll-view scroll-y style="width: 100%;height: 500rpx;">
+            <view class="addressDeatil" style="background-color: cadetblue;width: 95%;margin:20rpx auto;border-radius: 15rpx;padding:30rpx 0rpx;color: black;" wx:for="{{address}}" wx:key="index" bindtap="selectThis" data-index="{{index}}">{{item.region[0]}} {{item.region[1]}} {{item.region[2]}} {{item.address}}</view>
+        </scroll-view>
+        <view style="text-align: center;color: red;">点击地址选择</view>
+    </view>

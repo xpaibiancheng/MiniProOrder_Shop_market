@@ -1,0 +1,141 @@
+/* pages/shopDingdan/shopDingdan.wxss */
+/* 分类*/
+page{
+    background-color: rgb(247, 247, 247);
+}
+.fenlan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 50rpx auto 20rpx;
+  }
+  .list{
+    width: 50%;
+    text-align: center;
+  }
+  .list_title{
+    color: black;
+    font-size: 35rpx;
+  }
+  /* 选择 */
+.trendStyle{
+    border-bottom: 7rpx solid #FF8C00;
+    font-weight: 550;
+  }
+.kuaiDiRows{
+    width: 95%;
+    background-color: white;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kuaiDiRowsTop{
+    width: 98%;
+    height: 230rpx;
+    margin: 0rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.RowsTopLeft{
+    width: 20%;
+    height: 60%;
+}
+.RowsTopLeft>image{
+   width: 150rpx;
+   height: 180rpx;
+
+}
+.RowsTopMidd{
+    width: 55%;
+    height: 60%;
+}
+.RowsTopRight{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:dodgerblue;
+    color: white;
+    font-weight: 550;
+    border-radius: 10rpx;
+}
+.MiddText{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.middleTitle{
+    width: 95%;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+     /* 弹性盒子布局 */
+     display: -webkit-box;
+     /* 超出 文本省略号*/
+     text-overflow: ellipsis;
+     /* 隐藏超出文本*/
+     overflow: hidden;
+     /* 允许最大文本行数 */
+     -webkit-line-clamp: 2;
+     /* 自动换行 */
+     word-break: break-all;
+     -webkit-box-orient: vertical;
+}
+.middleNum_price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.kuaiDiRowsbottom{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20rpx;
+}
+.RowsbottomTop{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottomOrderCode{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bottomOrderName{
+    width: 30%;
+}
+.bottomOrderCode>image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.RowsbottomB{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+.RowsbottomPhone{width: 50%;}
+.RowsbottomAddress{
+    width: 50%;
+}

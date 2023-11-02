@@ -1,0 +1,38 @@
+/* pages/adminChongzhi/adminChongzhi.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 20rpx auto;
+}
+.top>input{
+    width:87%;
+    height: 80rpx;
+    background-color: white;
+    border-radius: 15rpx;
+    margin-right: 20rpx;
+}
+.top>button{
+    width: 170rpx;
+    border-radius: 15rpx;
+}
+/* 用户信息哦 */
+.userinfo{
+    width: 95%;
+    background-color: white;
+    border-radius: 20rpx;
+    margin: 20rpx auto;
+}
+.userinfo>view:nth-child(1){
+    padding: 20rpx 20rpx;
+    font-size: 37rpx;
+}
+.userinfo>view:nth-child(2){
+    padding: 20rpx 20rpx;
+    font-size: 37rpx;
+}

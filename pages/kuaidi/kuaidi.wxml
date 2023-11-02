@@ -1,0 +1,58 @@
+<view style="color: red;width: 95%;margin:20rpx auto">
+    快递须知：省内满68包邮，省外满168包邮
+</view>
+<view class="topSlice">
+    <view class="topSliceRow"></view>
+    <view class="topSliceText">地址填写</view>
+    <view class="topSliceRow"></view>
+</view>
+<view class="form-all">
+    <view class="form-address">
+        <text>收货地址：</text>
+        <picker mode="region" bindchange="bindRegionChange">
+            <view class="picker">
+                {{region[0]}}{{region[1]}}{{region[2]}}
+            </view>
+        </picker>
+    </view>
+    <view class="form-item">
+        <text>街道：</text>
+        <input placeholder="请输入街道" value="{{street}}" bindinput="bindStreetInput" />
+    </view>
+    <view class="form-item">
+        <text>姓名：</text>
+        <input placeholder="请输入姓名" bindinput="bindNameInput" />
+    </view>
+    <view class="form-item">
+        <text>手机号：</text>
+        <input type="number" placeholder="请输入手机号" bindinput="bindPhoneInput" />
+    </view>
+    <view class="form-textArea">
+        <text>备注：</text>
+        <textarea placeholder="请输入备注（选填）" bindinput="bindBeiZhu" ></textarea>
+    </view>
+</view>
+<view class="topSlice">
+    <view class="topSliceRow"></view>
+    <view class="topSliceText">订单详情</view>
+    <view class="topSliceRow"></view>
+</view>
+<!-- 订单 -->
+<view class="shopOrder" wx:for="{{shopRows}}" wx:key="index">
+    <image src="{{item.goodPhotosLast[0]}}" class="shopOrderImg"></image>
+    <view class="shopOrderText">
+        <!-- 标题 -->
+        <view class="shopOrderTextTitle">{{item.shopTitle}}</view>
+        <view class="PriceAndNum">
+            <!-- 价格 -->
+            <view class="shopOrderTextPrice" style="color:rgb(236, 165, 31);font-size: 30rpx;">价格:￥{{item.shopPrice}}-<text style="font-size: 25rpx;color: rgb(107, 107, 107);">优惠券减:{{item.quanJian}}</text></view>
+        </view>
+    </view>
+</view>
+<view class="shopSum">
+    <view class="shopSumNum">商品款式:×{{shopRows.length}}</view>
+    <view class="shopSumPrice">总价格:{{data_PriceAll}}</view>
+</view>
+<!-- 提交 -->
+<button style="width: 95%;margin:40rpx auto;background-color: #66CC00;color: white;" bindtap="bindSubmit">确定并支付</button>
+<view style="width: 100%;height: 60rpx;"></view>

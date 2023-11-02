@@ -1,0 +1,28 @@
+<!--pages/dingzhuoInfo/dingzhuoInfo.wxml-->
+<view style="margin: 20rpx auto;width: 95%;">特别提醒:如果要取消订单，请电话联系店家取消</view>
+<view class='noneTable' wx:if="{{userOderInfo.length==0}}">
+    <image src="/images/暂无订单.png" class="imageNone"></image>
+    <view>亲爱的小主，您似乎没有订桌信息~</view>
+    <view class="noneClick" bindtap="bindToOderTable">点我预定桌</view>
+</view>
+<view wx:for="{{userOderInfo}}" wx:key="index" class="haveTable" wx:if="{{userOderInfo.length!=0}}">
+    <view class="haveTableLeft">
+        <view style="font-size: 40rpx; color: black;">{{item.replay}}</view>
+        <view class="haveTableRightTwo" style="font-size: 30rpx;">核销码:{{item.oderCode}}</view>
+    </view>
+    <view class="haveTableRight">
+        <view class="haveTableRightOne" style="font-weight: 550;">
+            <view>{{item.name}}</view>
+            <view>{{item.phone}}</view>
+        </view>
+        <view class="haveTableRightTwo" style="color: cornflowerblue;">预约人数:{{item.num}}</view>
+        <view class="haveTableRightThree" style="color: cornflowerblue;">
+            <view>预约时间:</view>
+            <view>{{item.date}}</view>
+            <view>&&{{item.time}}</view>
+        </view>
+        <view class="haveTableRightTwo" style="font-size: 30rpx;color:#99CC99 ;">订桌信息:{{item.oderSuccessInfo}}</view>
+        <view class="haveTableRightTwo" style="font-size: 30rpx;color:#99CC99 ;">商家备注信息:{{item.beizhu}}</view>
+        
+    </view>
+</view>

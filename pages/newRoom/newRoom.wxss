@@ -1,0 +1,31 @@
+/* pages/newRoom/newRoom.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.roomCode{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+.roomCodeRow{
+    width: 230rpx;
+    height: 200rpx;
+    border-radius: 15rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    font-size: 40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+.buesy{
+    background-color: rgb(247, 30, 30);
+    color: white;
+}
+.free{
+    background-color: rgb(10, 131, 10);
+    color: white;
+}

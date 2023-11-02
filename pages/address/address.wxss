@@ -1,0 +1,56 @@
+/* pages/address/address.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.shezhi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.addressView{
+    width: 95%;
+    margin: 20rpx auto;
+    background-color: white;
+    border-radius: 20rpx;
+}
+.addressRow{
+    width: 97%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.rowInfoTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 550;
+
+}
+.rowInfoAddress{
+    padding-top: 15rpx;
+    font-size: 28rpx;
+    color: rgb(107, 107, 107);
+}
+.rowInfo:nth-child(1){
+    /* rpx px 1px == 2rpx */
+    padding-top: 20px;
+}
+/* 收货地址 */
+.accpectAddress{
+    width: 75%;
+    height: 75rpx;
+    position: fixed;
+    bottom: 10rpx;
+    background-color: rgba(249, 108, 47, 1);
+    color: white;
+    border-radius: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    left: 80rpx;
+    font-size: 37rpx;
+}

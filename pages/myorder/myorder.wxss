@@ -1,0 +1,101 @@
+/* pages/order/order.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.listRow:nth-child(1){
+    margin-left: 30rpx;
+}
+.listRow:nth-child(5){
+    margin-right: 30rpx;
+}
+/* 点击的时候样式 */
+.clickStyle{
+    font-weight: 550;
+    color: rgba(249, 108, 47, 1);
+    border-bottom: solid 5rpx rgba(249, 108, 47, 1);
+    padding-bottom: 15rpx;
+}
+/* 购物车订单 */
+.shopCarRows{
+    width: 95%;
+ 
+    margin: 20rpx auto;
+    background-color: white;
+    border-radius: 20rpx;
+
+}
+.shopCarRowsFirst{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20rpx;
+
+}
+.shopCarRowsSecond{
+    display: flex;
+    flex-direction: row;
+    
+    
+    margin-top: 20rpx;
+}
+.shopCarRowsSecondInfo{
+    margin-left: 20rpx;
+}
+.shopCarRowsSecondImg{
+    width: 280rpx;
+    height: 180rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin-left: 30rpx;
+}
+.shopCarRowsSecondTitle{
+    font-size: 28rpx;
+    
+}
+.shopCarRowsSecondTuple{
+    font-size: 27rpx;
+    padding-top: 40rpx;
+    color: rgba(167, 165, 165, 1);
+}
+.shopCarRowsThird{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.shopCarRowsFourth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+    padding-bottom:20rpx;
+}
+.shopCarRowsThird{
+    margin-left: 30rpx;
+    margin-top: 20rpx;
+}
+.Fourthdel{
+    width: 150rpx;
+    height:60rpx;
+    border: solid 2rpx rgba(151, 151, 151, 1);
+    border-radius: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgba(151, 151, 151, 1);
+}
+.ForthComment{
+    width: 150rpx;
+    height:60rpx;
+    border: solid 2rpx rgba(249, 108, 47, 1);
+    border-radius: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgba(249, 108, 47, 1);
+}

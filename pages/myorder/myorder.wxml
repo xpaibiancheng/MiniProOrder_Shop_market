@@ -1,0 +1,42 @@
+<!--pages/myorder/myorder.wxml-->
+<!--pages/order/order.wxml-->
+<view style="width: 100%;height: 90rpx;display: flex;flex-direction: row;align-items: center;justify-content: space-between;background-color: white;">
+    <view  class="listRow {{handIndex==index?'clickStyle':''}}" wx:for="{{orderList}}" wx:key="index" bindtap="bindClick" data-index="{{index}}">{{item}}</view>
+</view>
+<!-- 购物车订单 -->
+<scroll-view scroll-y style="width: 100%;height: 100vh;" >
+    <view class="shopCarRows" wx:for="{{orderInfo}}" wx:key="index">
+        <view class="shopCarRowsFirst">
+            <view style="margin-left: 30rpx;font-size: 30rpx;" >订单编号：{{item.orderNumber}}</view>
+            <view style="color: rgba(249, 108, 47, 1);font-size: 25rpx;margin-right: 15rpx;">{{item.status}}</view>
+        </view>
+        <view class="shopCarRowsSecond" wx:for="{{item.shopRows}}" wx:for-item="soonItem">
+            <image class="shopCarRowsSecondImg" src="{{soonItem.goodPhotosLast[0]}}" mode=""/>
+            <view class="shopCarRowsSecondInfo">
+                <view class="shopCarRowsSecondTitle">{{soonItem.shopTitle}}</view>
+                <view class="shopCarRowsSecondTuple">1份 / kg</view>
+            </view>
+        </view>
+        <view class="shopCarRowsThird">
+            <view style="color: rgba(167, 165, 165, 1);font-size: 27rpx;">下单日期：{{item.subTime}}</view>
+            <view style="font-size: 28rpx;">{{item.shopRows.length}}件商品共：<text style="color: rgba(249, 108, 47, 1);font-weight: 550;">¥ {{item.shifuPrice}}</text></view>
+        </view>
+        <view class="shopCarRowsFourth ">
+            <view style="margin-left: 20rpx;color: cadetblue;">方式:{{item.pre_title}}</view>
+            <view class="Fourthdel">删除</view>
+        </view>
+        <view wx:if="{{item.pre_title=='小茶馆商城快递'}}" style="font-size: 30rpx;display: flex;flex-direction: row;align-items: center;width: 97%;margin:auto;padding-bottom: 15rpx;display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+            <view>快递商家:{{item.kuaidiName}}</view>
+            
+            <view data-num="{{item.kuaidiNum}}" bindtap="copyIt">快递单号:{{item.kuaidiNum}}</view>
+        </view>
+        <view wx:if="{{item.pre_title=='小茶馆配送送'}}" style="font-size: 30rpx;display: flex;flex-direction: row;align-items: center;width: 97%;margin:auto;padding-bottom: 15rpx;display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+            <view>派送员:{{item.peiSongName}}</view>
+            <view data-phone="{{item.peiSongNum}}" bindtap="callPhone">派送员手机号:{{item.peiSongNum}}</view>
+        </view>
+        <view wx:if="{{item.pre_title=='小茶馆商城自提'}}" style="width: 97%;margin:auto;padding-bottom: 15rpx;font-size: 30rpx;">
+            核销码:{{item.finishFlag}}
+        </view>
+    </view>
+</scroll-view>
+

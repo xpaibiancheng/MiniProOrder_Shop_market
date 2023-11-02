@@ -1,0 +1,98 @@
+/**index.wxss**/
+page{
+    background-color: rgb(247, 247, 247);
+}
+.index_swiper{
+    width: 100%;
+    height: 650rpx;
+}
+.userInfo{
+    width: 95%;
+    height: 250rpx;
+    margin: 25rpx auto;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+.bgInfo{
+    width: 100%;
+   height: 250rpx;
+    position: absolute;
+    z-index: -1;
+}
+.index_userInfo{
+    width: 95%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(107, 107, 107);
+    margin: 20rpx auto;
+    position: absolute;
+
+}
+.userInfo_name_image{
+   margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+/* 预约、点单、自提 */
+.orderMain{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40rpx auto 20rpx;
+}
+.mainRows{
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20rpx;
+    padding: 25rpx 10rpx;
+}
+.mainRows>image{
+    width: 85rpx;
+    height: 85rpx;
+}
+.mainRows>view{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: rgb(107, 107, 107);
+}
+.orderMainTow{
+    width: 95%;
+    height: 180rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    margin: 20rpx auto;
+    border-radius: 20rpx;
+}
+.mainRowsTwo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainRowsTwo>image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.mainRowsTwo>view{
+    margin-top: 10rpx;
+    font-size: 25rpx;
+    color: rgb(107, 107, 107);
+}
+.userMoney{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+

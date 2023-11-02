@@ -1,0 +1,19 @@
+<!--pages/adminUser/adminUser.wxml-->
+<view class="status" wx:for="{{userinfo}}" wx:key="index" wx:if="{{userinfo.length!=0}}">
+    <view class="statusRows" style="padding-top: 20rpx;">
+        <view class="rows">姓名</view>
+        <view class="rowsInfo">{{item.userName}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">手机号</view>
+        <view class="rowsInfo">{{item.phone}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">余额</view>
+        <view class="rowsInfo">{{item.userAccount}}</view>
+    </view>
+    <view class="statusRows">
+        <view class="rows">卡号</view>
+        <view class="rowsInfo">{{item.userNum}}</view>
+    </view>
+</view>

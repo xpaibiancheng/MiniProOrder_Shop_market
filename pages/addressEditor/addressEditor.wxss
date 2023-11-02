@@ -1,0 +1,22 @@
+/* pages/addressEditor/addressEditor.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.rows{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:20rpx auto;
+    padding-top: 30rpx;
+}
+.rows>input{
+    border-bottom: 2rpx solid #ccc;
+    padding-bottom:10rpx;
+    width: 75%;
+}
+.picker{
+
+    border-bottom: 2rpx solid #ccc;
+    padding-bottom: 10rpx;
+}   

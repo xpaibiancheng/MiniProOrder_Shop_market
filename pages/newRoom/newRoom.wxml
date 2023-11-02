@@ -1,0 +1,12 @@
+<!--pages/newRoom/newRoom.wxml-->
+<view bindtap="bindNew" style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 97%;margin:20rpx auto;border-bottom: #ccc dotted 3rpx;padding-bottom: 20rpx;">
+    <view style="color:cadetblue ;">新建桌位</view>
+    <image style="width: 60rpx;height: 60rpx;" src="/static/新建门店.png"></image>
+</view>
+<!-- 桌子 -->
+<view class="roomCode">
+    <view class="roomCodeRow {{item.status == '空闲' ? 'free':'buesy'}}" wx:for="{{rommRows}}" wx:key="index" bindtap="bindRoom" data-index="{{index}}">
+        <view>{{item.code}}号桌</view>
+        <view>{{item.status}}</view>
+    </view>
+</view>

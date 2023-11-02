@@ -1,0 +1,63 @@
+<!--pages/kdAddress/kdAddress.wxml-->
+<view class="topSlice">
+    <view class="topSliceRow"></view>
+    <view class="topSliceText">地址填写</view>
+    <view class="topSliceRow"></view>
+</view>
+<view class="infoGroups">
+    <view class="group">
+        <text style="width: 340rpx;">地址:</text>
+        <view bindtap="bindTest" style="font-size: 27rpx">{{addressDetail}}</view>
+    </view>
+    <!-- 楼号单元 -->
+    <view class="group">
+        <text>楼号单元室:</text>
+        <input placeholder="请输入具体门牌号" bindinput="bindRoom"/>
+    </view>
+    <!-- 姓名 -->
+    <view class="group">
+        <text>姓名:</text>
+        <input placeholder="请输入姓名" bindinput="bindName"/>
+    </view>
+    
+    <!-- 手机号 -->
+    <view class="group">
+        <text>手机号:</text>
+        <input placeholder="请输入手机号" bindinput="bindPhone" />
+    </view>
+    
+    <!-- 距离 -->
+    <view class="group" wx:if="{{targetKm.length!=0}}">
+        <text>距离:</text>
+        <view>{{targetKm}}Km</view>
+    </view>
+    <view class="group dataSelect">
+        <text>送货日期:</text>
+        <picker style="margin-left: 20rpx;" mode="date" bindchange="handleDateChange">
+            <view class="time-picker">{{selectedDateTime}}</view>
+        </picker>
+    </view>
+    <view class="group dataSelect">
+        <text>送货时间段:</text>
+        <picker mode="time" style="margin-left: 20rpx;"  bindchange="handleTimePickerChange">
+            <view class="time-picker">{{selectedTime}}</view>
+        </picker>
+    </view>
+</view>
+<view class="shopOrder" wx:for="{{shopRows}}" wx:key="index">
+    <image src="{{item.goodPhotosLast[0]}}" class="shopOrderImg"></image>
+    <view class="shopOrderText">
+        <!-- 标题 -->
+        <view class="shopOrderTextTitle">{{item.shopTitle}}</view>
+        <view class="PriceAndNum">
+            <!-- 价格 -->
+            <view class="shopOrderTextPrice" style="color:rgb(236, 165, 31);font-size: 30rpx;">价格:￥{{item.shopPrice}}-<text style="font-size: 25rpx;color: rgb(107, 107, 107);">优惠券减:{{item.quanJian}}</text></view>
+        </view>
+    </view>
+</view>
+<view class="shopSum">
+    <view class="shopSumNum">配费用:{{paotuiPrice}}</view>
+    <view class="shopSumPrice">总价格:{{data_PriceAll}}</view>
+</view>
+<button style="width: 95%;margin:40rpx auto;background-color: #66CC00;color: white;" bindtap="bindSubmit">确定并支付</button>
+<view style="width: 100%;height: 80rpx;"></view>

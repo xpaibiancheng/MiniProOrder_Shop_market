@@ -1,0 +1,27 @@
+<!--pages/addressEditor/addressEditor.wxml-->
+
+<view style="width: 97%;margin:20rpx auto;background-color: white;border-radius: 20rpx;">
+    <view class="rows" style="padding-top: 20rpx;">
+        <view class="lable">姓<text style="color:white;">你好</text>名：</view>
+        <input placeholder="请输入姓名" bindinput="bindName"  />
+    </view> 
+    <view class="rows">
+        <view class="lable">手<text style="color:white;">好</text>机 号：</view>
+        <input placeholder="请输入手机号" bindinput="bindPhone" />
+    </view> 
+    <view class="rows">
+        <view>收货地址：</view>
+        <picker style="width: 75%;" mode="region" bindchange="bindRegionChange">
+            <view class="picker">
+                {{region}}
+            </view>
+        </picker>
+    </view>
+    <view class="rows" style="padding-bottom: 20rpx;">
+        <view class="lable">详细地址：</view>
+        <input  placeholder="请输入详细地址" bindinput="bindAddressDetail" />
+    </view>
+    <button type="primary" style="border-radius: 20rpx;" bindtap="subaddress">保存地址</button>
+    <view style="width: 100%;height: 40rpx;"></view>
+</view>
+

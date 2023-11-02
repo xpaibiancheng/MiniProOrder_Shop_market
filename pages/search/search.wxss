@@ -1,0 +1,64 @@
+/* pages/search/search.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.search_top{
+    width: 95%;
+    margin:30rpx auto;
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+}
+.search_top>input{
+    width: 70%;
+    background-color: white;
+    border-radius: 30rpx;
+    height: 90rpx;
+}
+.search_top>button{
+    background-color: #99CC99;
+    border-radius:20rpx;
+    width: 150rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    color: white;
+    text-align: center;
+}
+/* 搜索为空 */
+.search_row1{
+    margin-top: 50rpx;
+    width: 100%;
+    text-align: center;
+    color: rgb(107, 107, 107);
+}
+.search_row2{
+    width: 95%;
+    margin: 20rpx auto;
+}
+.search_row2_row{
+    width: 95%;
+    margin: 20rpx auto;
+    height: 200rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search_row2_row>image{
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 30rpx;
+}
+.time_title{
+    height: 150rpx;
+}
+.title{
+    word-break: break-all;
+}
+.time{
+    font-size: 30rpx;
+    color: rgb(107, 107, 107);
+    margin-top: 20rpx;
+}

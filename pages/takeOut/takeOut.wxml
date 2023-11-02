@@ -1,0 +1,81 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<!-- 背景插画 -->
+<image class="login_bgTop" src="https://img-qn.51miz.com/preview/element/00/01/10/26/E-1102659-1648FA12.jpg%21/quality/90/unsharp/true/compress/true/fw/450"></image>
+<view style="width: 100%;height: 200rpx;"></view>
+<view class="oderDetail_top">
+    <image src="/images/logo.jpg" mode=""/>
+    <view style="margin-left: 20rpx;">
+        <view style="font-size: 40rpx;font-weight: 550;">小茶馆coffee&tea（欧美世纪花园店）</view>
+        <view style="font-size: 30rpx;margin-top:30rpx;font-family: 楷体;color: rgb(107, 107, 107);">千秋大业一壶茶</view>
+    </view>
+</view>
+<view class="orderDetail_tea">
+    <scroll-view scroll-y class="oderDetail_tea_left">
+        <view class="tea_leftText {{handIndex==index?'tea_clickTextBg':''}}" wx:for="{{class}}" wx:key="index" data-index="{{index}}" data-value="{{item}}" bindtap="bindIndex" >{{item}}</view>
+    </scroll-view>
+    <scroll-view scroll-y class="orderDetail_tea_right" style="width:80%;height: 1000rpx">
+        <view class="orderDetail_tea_right_rows" wx:for="{{orderRowsZiti}}" wx:key="index" bindtap="bindOrderDeatil" data-index="{{index}}">
+            <image class="rows_Image" src="{{item.goodPhotosLast[0]}}" mode=""/>
+            <view class="rows_right" >
+                <!-- 标题 -->
+                <view class="rows_right_title">{{item.shopTitle}}</view>
+                <!-- 月售99+和好评率 -->
+                <view class="rows_right_title_monthAnd">
+                    <view class="right_left">总售{{item.shopSaleNum}}</view>
+                    <view class="right_right">好评率100%</view>
+                </view>
+                <!--价格和加入-->
+                <view class="rows_right_priceAndcount">
+                    <view class="rowsPrice" style="color: sandybrown;">￥{{item.shopPrice}}</view>
+                    <view class="rowsCount">
+                        <!-- <image class="jian" src="/images/减 (2).png"></image>
+                        <view></view> -->
+                        <image  class="rows_add" src="/images/添加.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view style="width: 100%;height: 100rpx;"></view>
+    </scroll-view>
+</view>
+<view class="oderAll">
+    <view class="oderAllLeft" bindtap="bindShopCar">
+        <image style="width: 70rpx;height: 70rpx;margin-left: 40rpx;" src="/images/购物车 (2).png" mode=""/>
+        <view style="font-size: 45rpx;margin-left: 15rpx;color: white;font-weight: 550;">×{{orderGroupsZiti.length}}</view>
+    </view>
+    <view class="orderAllRight" style="color: rgb(147, 202, 248);" bindtap="bindNavXiaDan">立即下单</view>
+</view>
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view style="width: 100%;height: 80rpx;display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+            <view style="margin-left: 20rpx;font-weight: 550;">
+                自提
+            </view>
+            <view style="display: flex;flex-direction: row;align-items: center;" bindtap="bindClearAll">
+                <image src="/images/删除 (3).png" style="width: 60rpx;height: 60rpx;"></image>
+                <view style="color: #ccc;margin-left: 15rpx;">清空购物车</view>
+            </view>
+        </view>
+        <view style="width: 95%;border-top:5rpx solid #ccc;margin:10rpx auto"></view>
+        <!--自定义弹窗内容-->
+        <scroll-view scroll-y style="width: 100%;height: 500rpx;">
+            <view wx:for="{{orderGroupsZiti}}" wx:key="index" style="width: 95%;height: 180rpx;margin:auto;background-color:#99CC99;border-radius: 15rpx;display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-top: 20rpx;overflow: hidden;">
+                <image src="{{item.goodGroups.goodPhotosLast[0]}}" style="width: 120rpx;height: 120rpx;border-radius: 50%;overflow: hidden;margin-left: 15rpx;"></image>
+                <view style="width: 65%;margin-left: 10rpx;color: white;">
+                    <!-- 属性 -->
+                    <view style="display: flex;flex-direction: row;align-items: center;">
+                        <view>{{item.goodGroups.shopTitle}}￥{{item.goodGroups.shopPrice}}</view>
+                        <block wx:for="{{item.orderShuXing}}" wx:for-item="itemShuXing" wx:for-index="indexShuXing">
+                            <view>+{{itemShuXing.value}}￥{{itemShuXing.price}}</view>
+                        </block>
+                    </view>
+                    <view style="margin-top: 20rpx;display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                        <view>数量:{{item.orderNum}}</view>
+                        <view style="color: rgb(204, 153, 22);">￥{{item.priceAll}}</view>
+                    </view>
+                </view>
+                <view style="width: 10%;height: 100%;background: red;display: flex;flex-direction: row;justify-content: center;align-items: center;color: white;" bindtap="bindClearRow" data-index="{{index}}">删除</view>
+            </view>
+        </scroll-view>
+        <view style="text-align: center;">点击阴影处立即下单</view>
+</view>

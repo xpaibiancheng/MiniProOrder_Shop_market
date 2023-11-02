@@ -1,0 +1,53 @@
+/* pages/orderClass/orderClass.wxss */
+page{
+    background-color:rgb(247, 247, 247);
+}
+.tea_Name{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+    
+    /* justify-content: center; */
+    width: 100%;
+    padding-left: 20rpx;
+}
+.shopClass{
+    width: 45%;
+    height: 500rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+    margin-left: 15rpx;
+}
+.shopClass_Image{
+    width: 98%;
+    height: 280rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin-top: 15rpx;
+}
+.shopClass_title{
+    width: 95%;
+     /* 弹性盒子布局 */
+  display: -webkit-box;
+  /* 超出 文本省略号*/
+  text-overflow: ellipsis;
+  /* 隐藏超出文本*/
+  overflow: hidden;
+  /* 允许最大文本行数 */
+  -webkit-line-clamp: 2;
+  /* 自动换行 */
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.shopClass_price_count{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

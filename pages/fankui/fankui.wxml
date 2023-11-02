@@ -1,0 +1,22 @@
+<!--pages/fankui/fankui.wxml-->
+<view class="containerTwo">
+  <form bindsubmit="submitForm">
+    <view class="form-group">
+      <view class="form-label">姓名：</view>
+      <input class="form-input" name="name" placeholder="请输入您的姓名" bindinput="bindName" />
+    </view>
+    <view class="form-group">
+      <view class="form-label">联系方式：</view>
+      <input class="form-input" name="contact" placeholder="请输入您的微信或手机" bindinput="bindTalkstyle" />
+    </view>
+    <view class="form-group">
+      <view class="form-label">是否为本地顾客：</view>
+      <input class="form-input" name="school" placeholder="请填写" bindinput="bindSchool" />
+    </view>
+    <view class="form-group">
+      <view class="form-label">问题反馈：</view>
+      <input class="form-input" name="major" placeholder="请反馈您的问题" bindinput="bindSubject" />
+    </view>
+    <button class="submit-button" formType="submit" bindtap="bindSub" bindtap="bindSub">提交</button>
+  </form>
+</view>

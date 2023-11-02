@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="search_top">
+    <input placeholder="请输入商品类型" bindinput="bindValue"/>
+    <button bindtap="bindSearch">搜索</button>
+</view>
+<!-- 显示框 -->
+<view class="search_buttom">
+    <!-- 没有搜索记录的时候显示 -->
+    <view class="search_row1" wx:if="{{shopFlag==0}}">
+        暂未查询到该商品
+    </view> 
+    <!-- 有搜索记录的时候显示 -->
+    <view class="search_row2" wx:if="{{shopFlag==1}}">
+        <scroll-view scroll-y style="width:100%;height: 900rpx;">
+            <block wx:for="{{resultArr}}" wx:key="index">
+                <view class="search_row2_row" data-index="{{index}}" bindtap="bindNavdetail">
+                    <image src="{{item.shopImages[0]}}" />
+                    <view class="time_title">
+                        <view class="title">{{item.shopTitle}}</view>
+                        <view class="time">{{item.createTime}}</view>
+                    </view>
+                </view>
+            </block>  
+        </scroll-view>
+    </view>
+</view>

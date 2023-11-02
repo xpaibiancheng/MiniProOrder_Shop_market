@@ -1,0 +1,164 @@
+
+<!--pages/service/service.wxml-->
+<view class="row02 rows">
+  <view class="title">点单管理</view>
+  <view class="txt_row02"></view>
+</view>
+<!-- 点单管理 -->
+<view class="functions">
+    <view class="functionGroup" bindtap="bindRoomStatus">
+        <image src="/static/单人座位——选座位.png"></image>
+        <view>座位状态</view>
+    </view>
+    <view class="functionGroup" bindtap="Orziti">
+        <image src="/static/待自提.png"></image>
+        <view>自提订单管理</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;right: 280rpx;top:120rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{orzitiNum}}</view>
+    </view>
+    <view class="functionGroup" bindtap="orderHxZiti">
+        <image src="/static/核销卡券.png"></image>
+        <view>点单自提核销</view>
+    </view>
+    <view class="functionGroup" bindtap="orderTs">
+        <image src="/static/堂食 (3).png"></image>
+        <view>堂食订单管理</view>
+        <view  style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 200rpx;top:280rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{tangshi}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindAsk">
+        <image src="/static/暂无.png"></image>
+        <view>无人店铺</view>
+    </view>
+    <view class="functionGroup" bindtap="bindSumOrder">
+        <image src="/static/合计.png"></image>
+        <view>点单商品合计</view>
+    </view>
+    <view class="functionGroup" bindtap="bindShangXin" >
+        <image src="/static/商品上新架.png"></image>
+        <view>点单上新</view>
+    </view>
+    <view class="functionGroup" bindtap="bindDrManer">
+        <image src="/static/商品管理.png"></image>
+        <view>点单商品管理</view>
+    </view>
+</view>
+<!-- 商城管理 -->
+<view class="row02 rows">
+  <view class="title">商城管理</view>
+  <view class="txt_row02"></view>
+</view>
+<view class="functions">
+    <view class="functionGroup" bindtap="addShop">
+        <image src="/static/上新信息完善.png"></image>
+        <view>商品上新</view>
+    </view>
+    <view class="functionGroup" bindtap="bindZitiGo">
+        <image src="/static/待自提.png"></image>
+        <view>商品自提管理</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 450rpx;top:700rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{shopZiti}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindZitiHx">
+        <image src="/static/核销卡券.png"></image>
+        <view>商品自提核销</view>
+    </view>
+    <view class="functionGroup" bindtap="bindKuaiDi">
+        <image src="/static/快递.png"></image>
+        <view>商品快递管理</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 200rpx;top:850rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{shopKd}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindadminPs">
+        <image src="/static/派送.png"></image>
+        <view>商品派送订单</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 450rpx;top:850rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{shoppS}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindadminPsRule">
+        <image src="/images/添加.png"></image>
+        <view>商品派送费规则</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 450rpx;top:850rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{shoppS}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindDingdan">
+        <image src="/static/统计 (1).png"></image>
+        <view>订单统计</view>
+    </view>
+    <view class="functionGroup" bindtap="bindShopManer">
+        <image src="/static/商品管理.png"></image>
+        <view>商城商品管理</view>
+    </view>
+</view>
+<view class="row02 rows">
+  <view class="title">预约管理</view>
+  <view class="txt_row02"></view>
+</view>
+<view class="functions">
+    <view class="functionGroup" bindtap="bindYuyue">
+        <image src="/static/预约管理.png"></image>
+        <view>预约信息</view>
+        <view style="text-align: center;line-height: 2;font-weight: 550;position: absolute;left: 200rpx;top:1280rpx;width: 40rpx;height: 50rpx;background-color: red;border-radius: 50%;">{{shoppS}}</view>
+    </view>
+    <view class="functionGroup" bindtap="bindHeXiao">
+        <image src="/static/核销卡券.png"></image>
+        <view>预约核销</view>
+    </view>
+    <view class="functionGroup" bindtap="orderPrice">
+        <image src="/static/账单.png"></image>
+        <view>预约价格</view>
+    </view>
+</view>
+<!-- 用户管理 -->
+<view class="row02 rows">
+  <view class="title">用户信息</view>
+  <view class="txt_row02"></view>
+</view>
+<view class="functions">
+    <view class="functionGroup" bindtap="bindForuserPay">
+        <image src="/static/充值 (2).png"></image>
+        <view>为用户充值</view>
+    </view>
+    <view class="functionGroup" bindtap="bindUserInfo">
+        <image src="/static/用户 (4).png"></image>
+        <view>用户基本信息</view>
+    </view>
+    <view class="functionGroup" bindtap="bindZhangdan">
+        <image src="/static/账单.png"></image>
+        <view>用户消费账单</view>
+    </view>
+    
+    <view class="functionGroup" bindtap="bindDounc">
+        <image src="/static/合计.png"></image>
+        <view>充值记录</view>
+    </view>
+
+    <view class="functionGroup" bindtap="bindRulePay">
+        <image src="/images/充值 (1).png"></image>
+        <view>充值规则设置</view>
+    </view>
+
+    <view class="functionGroup" bindtap="bindDounc">
+        <image src="/static/会员 (3).png"></image>
+        <view>会员折扣</view>
+    </view>
+</view>
+<!-- 系统数据 -->
+<view class="row02 rows">
+  <view class="title">后台数据</view>
+  <view class="txt_row02"></view>
+</view>
+<view class="functions">
+    <view class="functionGroup" bindtap="bindAddAdmin">
+        <image src="/static/后台密码.png"></image>
+        <view>更改后台密码</view>
+    </view>
+</view>
+
+<!-- 更改 密码 -->
+<view class="adminStaock" wx:if="{{adminFlag==true}}">
+    <view class="adminTop">
+        <view style="margin-left: 15rpx;color: royalblue;font-weight: 550;">品铄管理后台</view>
+        <view style="margin-right: 15rpx;color: red;" bindtap="bindAdminClose">关闭</view>
+    </view>
+    <input placeholder="请输入密码" bindinput="bindInputadmin" type="password" />
+    <input placeholder="请确认密码" bindinput="bindInputQueRen" type="password" />
+    <view class="clickSelectw">
+        <view style="background-color: lightcoral;" bindtap="bindAdminClose">取消</view>
+        <view style="background-color: mediumseagreen;" bindtap="bindQueDing">确定</view>
+    </view>
+</view>

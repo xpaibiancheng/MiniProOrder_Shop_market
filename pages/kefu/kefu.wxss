@@ -1,0 +1,40 @@
+/* pages/kefu/kefu.wxss */
+/* pages/serviceCenter/serviceCenter.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.allCon{
+    width: 95%;
+    border-radius: 20rpx;
+    background-color: white;
+    margin: 20rpx auto;
+    padding-bottom: 20rpx;
+    
+}
+.imgs{
+    width: 95%;
+    padding-bottom: 20rpx;
+    border: 2px solid #3478f6; /* 设置蓝色边框 */
+    box-shadow: 0 0 5px #3478f6;
+    margin: 20rpx 20rpx;
+    
+}
+.rows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    justify-content: space-between;
+    margin: 20rpx auto;
+    border-bottom: 1rpx solid #ccc;
+    height: 60rpx;
+    font-size:35rpx;
+}
+.rows:last-child {
+    padding-bottom: 40rpx; /* 设置 padding-bottom 的值，这里为 20rpx */
+}
+.rowsCopy{
+    background-color: green;
+    color: white;
+    font-size: 27rpx;
+}

@@ -1,0 +1,25 @@
+<!--pages/address/address.wxml-->
+
+<view class="shezhi">
+    <view></view>
+    <view bindtap="bindDelWith" style="margin-right: 30rpx;color: rgba(249, 108, 47, 1);">设置</view>
+</view>
+<!-- 收货地址 -->
+<view class="addressView">
+    <view class="addressRow" wx:for="{{addressRows}}" wx:key="index">
+        <view class="rowInfo">
+            <view class="rowInfoTop">
+                <view class="rowInfoName">{{item.name}}</view>
+                <view class="rowInfoPhone">{{item.phonne}}</view>
+            </view>
+            <view class="rowInfoAddress">
+                <text wx:for="{{item.region}}" wx:for-item="regionItem">{{regionItem}}</text>{{item.address}}
+            </view>
+            <view bindtap="bindDel" data-index="{{index}}" wx:if="{{delFlag==true}}" style="background-color: red;width: 120rpx;color: white;text-align: center;border-radius: 15rpx;margin-top: 15rpx;">删除</view>
+        </view>
+    </view>
+    <view style="width: 100%;height: 40rpx;"></view>
+</view>
+<!--添加收货地址 -->
+<view class="accpectAddress" bindtap="bindNavAdd">+ 收货地址</view>
+

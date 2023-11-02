@@ -1,0 +1,40 @@
+/* pages/pay/pay.wxss */
+page{
+    background: rgba(245, 249, 250, 1);
+}
+.yuePay{
+    width: 95%;
+    height: 250rpx;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #c2ddc2;
+    margin: 20rpx auto;
+}
+.payNum{
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 20rpx auto;
+}
+.payRows{
+    width: 30%;
+   
+    border-radius: 0rpx 50rpx 0 0;
+    background-color: white;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    font-size: 40rpx;
+    text-align: center;
+    line-height: 4;
+    color: rgb(107, 107, 107);
+}
+
+.payshuoming>view{
+    width: 95%;
+    margin: 5rpx auto;
+}

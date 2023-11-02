@@ -1,0 +1,48 @@
+<!--pages/dingzuo/dingzuo.wxml-->
+
+<view class="row">
+    <view>姓名</view>
+    <input type="text" placeholder="请输入姓名" value="{{oderName}}" bindinput="bindName"/>
+</view>
+<view style="width: 95%;border-top: solid #D3D3D3 1rpx;margin:0 auto;border-radius: 20rpx;"></view>
+<view class="row">
+    <view>联系电话</view>
+    <input type="text" placeholder="输入手机号" value="{{oderPhone}}" bindinput="bindPhone"/>
+</view>
+<view style="width: 95%;border-top: solid #D3D3D3 1rpx;margin:0 auto;border-radius: 20rpx;"></view>
+<view class="row dataSelect">
+    <view>取货日期</view>
+    <picker style="margin-left: 20rpx;" mode="date" bindchange="handleDateChange">
+        <view class="time-picker">{{selectedDateTime}}</view>
+    </picker>
+</view>
+<view style="width: 95%;border-top: solid #D3D3D3 1rpx;margin:20rpx auto;border-radius: 20rpx;"></view>
+<view class="row dataSelect">
+    <view>取货时间段</view>
+    <picker mode="time" style="margin-left: 20rpx;"  bindchange="handleTimePickerChange">
+        <view class="time-picker">{{selectedTime}}</view>
+    </picker>
+</view>
+<button style="width: 95%;margin:40rpx auto;background-color: #66CC00;color: white;" bindtap="bindSubmit">确定并支付</button>
+<!-- <view class="kefu">
+    <image src="/images/客服.png" style="width: 80rpx;height: 80rpx;"></image>
+    <button>联系店家</button>
+</view> -->
+<view class="shopOrder" wx:for="{{shopRows}}" wx:key="index">
+    <image src="{{item.goodPhotosLast[0]}}" class="shopOrderImg"></image>
+    <view class="shopOrderText">
+        <!-- 标题 -->
+        <view class="shopOrderTextTitle">{{item.shopTitle}}</view>
+        <view class="PriceAndNum">
+            <!-- 价格 -->
+            <view class="shopOrderTextPrice" style="color:rgb(236, 165, 31);font-size: 30rpx;">价格:￥{{item.shopPrice}}-<text style="font-size: 25rpx;color: rgb(107, 107, 107);">优惠券减:{{item.quanJian}}</text></view>
+        </view>
+    </view>
+</view>
+<view class="shopSum">
+    <view class="shopSumNum">商品款式:×{{shopRows.length}}</view>
+    <view class="shopSumPrice">总价格:{{data_PriceAll}}</view>
+</view>
+<view style="color: rgb(107, 107, 107);width: 95%;margin:20rpx auto">
+    自提须知：自提须提前支付
+</view>

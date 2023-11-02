@@ -1,0 +1,100 @@
+/* pages/kdAddress/kdAddress.wxss */
+.topSlice{
+    width: 95%;
+    margin: 20rpx auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.topSliceRow{
+    width: 35%;
+    border-top: 3rpx solid #ccc;
+}
+.topSliceText{
+    color: teal;
+}
+.infoGroups{
+    width: 95%;
+    margin: 10rpx auto;
+}
+.group{
+    display: flex;
+    height: 80rpx;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20rpx;
+    border-bottom: #ccc 2rpx solid;
+    padding: 0 10rpx 0 0;
+}
+.group>text{
+    width: 30%;
+    font-size: 37rpx;
+}
+.group>input{
+    width: 60%;
+    height: 70rpx;
+}
+.time-picker{
+    color: rgb(107, 107, 107);
+}
+.shopOrder{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin: 20rpx auto;
+    background-color:#f8f0f0;
+    border-radius: 20rpx;
+}
+.shopOrderImg{
+    width: 25%;
+    height: 180rpx;
+    border-radius: 15rpx;
+    margin-left: 20rpx;
+}
+.shopOrderText{
+    width: 70%;
+    height: 200rpx;
+    font-size: 35rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shopOrderTextTitle{
+    height: 45%;
+    width: 95%;
+    /* 弹性盒子布局 */
+    display: -webkit-box;
+    /* 超出 文本省略号*/
+    text-overflow: ellipsis;
+    /* 隐藏超出文本*/
+    overflow: hidden;
+    /* 允许最大文本行数 */
+    -webkit-line-clamp: 2;
+    /* 自动换行 */
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}
+.shopSum{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 20rpx;
+    height: 70rpx;
+    font-size: 40rpx;
+}
+.PriceAndNum{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+}
